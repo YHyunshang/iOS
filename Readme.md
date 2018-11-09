@@ -2,10 +2,13 @@
     
 
 ##### 运行环境
+
 * Xcode9.0+
 * 电脑配置cocoapod(注：未配置可参考：[cocoapod 配置](https://www.cnblogs.com/chuancheng/p/8443677.html))
 
+
 ##### 目录结构描述
+
 
 ```
 ├── Readme.md                   // help
@@ -45,8 +48,13 @@
 │   ├── YHTrackSDK-iOS          // 埋点封装
     └── YHNetworkTools          // 网络库封装
 ```
+
+
 ##### 部分控件使用说明
+
+
 ###### YHPickerView 使用
+
 ```
     YHPickerView *picker = [YHPickerView setPublicPickerView];
     picker.title = @"标题名称";
@@ -58,6 +66,7 @@
 ```
 
 ###### YHMultisegmentView 使用
+
 ```
 {//创建
     YHMultiSegmentView *segmentView = [YHMultiSegmentView initWithNib:@"OrderTitleView" owner:self];
@@ -74,14 +83,17 @@
 ```
 
 ###### YHToast 使用
+
 ```
     [YHToast showViewWithText:@"成功提示内容" imageType:YHToastImageTypeSuccess];
     [YHToast showViewWithText:@"失败提示内容" imageType:YHToastImageTypeError];
 ```
 
+
 ##### 版本更新说明
 
 ###### V0.1.0更新说明
+
 1. 约束项目目录结构；
 2. 约束常用第三方库；
 3. 配置常用宏、pch；
