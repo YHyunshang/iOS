@@ -10,7 +10,7 @@
 ```
 ├── Readme.md                   // help
 ├── 编码须知.txt                 // 编码规范                       
-├── config                      // 配置
+├── config                      // 项目配置文件
 │   ├── YHAppColor              // 应用颜色配置
 │   ├── YHPermissionManager     // 常用权限获取
 │   ├── YHCacheManager          // 存储管理
@@ -22,7 +22,6 @@
 ├── NetRequest                  // 请求类
 ├── Library                     // 非pod第三方库
 ├── Extension                   // 自定义扩展类
-├── Config                      // 项目配置文件
 ├── BaseUI                      // UI控件基类
 │   ├── YHPickerView            // 单选picker封装
 │   ├── YHWebView               // webview 封装
@@ -44,9 +43,7 @@
 │   ├── SDCycleScrollView       // 轮播图
 │   ├── MBProgressHUD           // 加载loding
 │   ├── YHTrackSDK-iOS          // 埋点封装
-│   └── YHNetworkTools          // 网络库封装
-├── YHArchitectureTests         // 其他测试用例
-└── YHArchitectureUITests       // UI测试用例
+    └── YHNetworkTools          // 网络库封装
 ```
 ##### 部分控件使用说明
 ###### YHPickerView 使用
@@ -66,8 +63,8 @@
     YHMultiSegmentView *segmentView = [YHMultiSegmentView initWithNib:@"OrderTitleView" owner:self];
     segmentView.delegate = self;
     segmentView.frame = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];;
-    UIView *headView = [[UIView new]];
-    [headView addSubview:segmentView];
+    UIView *contentView = [[UIView new]];
+    [contentView addSubview:segmentView];
 }
     
     - (void)multiSegmentView:(YHMultiSegmentView*) segmentView didChangedIndex:(NSInteger)curIndex oldIndex:(NSInteger)oldIndex
