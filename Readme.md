@@ -6,6 +6,9 @@
 * Xcode9.0+
 * 电脑配置cocoapod(注：未配置可参考：[cocoapod 配置](https://www.cnblogs.com/chuancheng/p/8443677.html))
 
+##### 使用说明
+1. 使用命令行进入项目目录 
+2. 执行命令 ： pod install
 
 ##### 目录结构描述
 
@@ -37,7 +40,7 @@
 │   │   └── YHUserGuideViewController  // 产品说明轮播图
 文档
 ... ...  ...
-├── Podfile                     // 第三方依赖库
+└── Podfile                     // 第三方依赖库
 │   ├── AFNetworking            // 网络库
 │   ├── Masonry                 // 布局库
 │   ├── SDWebImage              // 图片缓存
@@ -46,7 +49,7 @@
 │   ├── SDCycleScrollView       // 轮播图
 │   ├── MBProgressHUD           // 加载loding
 │   ├── YHTrackSDK-iOS          // 埋点封装
-    └── YHNetworkTools          // 网络库封装
+└── └── YHNetworkTools          // 网络库封装
 ```
 
 
