@@ -1,0 +1,23 @@
+//
+//  YHPrefixHeader.pch
+//  YHArchitecture
+//
+//  Created by Yangli on 2018/10/14.
+//  Copyright © 2018年 永辉. All rights reserved.
+//
+
+#ifndef YHPrefixHeader_pch
+#define YHPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "AppDelegate.h"
+#import "YHMainViewController.h"
+#import "YHConstant.h"
+#import "YHToast.h"
+#import "Masonry.h"
+#import "YHAppColor.h"
+
+#define RootTabbarViewConTroller ((YHMainViewController*)[AppDelegate appDelegate].window.rootViewController)
+
+#endif /* YHPrefixHeader_pch */

@@ -1,0 +1,43 @@
+{
+    "ACTION": {
+        "ViewController/clickBtn/2": {
+            "userDefined": {
+                "eventid": "201803074|93",
+                "target": "",
+                "pageid": "234",
+                "pagename": "button点击，跳转至下一个页面"
+            },
+           
+        }
+    },
+    
+    "PAGEPV": {
+        "ViewController": {
+            "userDefined": {
+                "pageid": "234",
+                "pagename": "XXX 页面展示了"
+            }
+        }
+    },
+    "TABLEVIEW": {
+        "ViewController/UITableView/0":{
+            "userDefined": {
+                "eventid": "201803074|93",
+                "target": "",
+                "pageid": "234",
+                "pagename": "tableview 被点击"
+            }
+        }
+    },
+    
+    "GESTURE": {
+        "ViewController/controllerclicked:":{
+            "userDefined": {
+                "eventid": "201803074|93",
+                "target": "",
+                "pageid": "123",
+                "pagename": "手势响应"
+            }
+        }
+    }
+}
