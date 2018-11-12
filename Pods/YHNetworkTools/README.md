@@ -22,7 +22,7 @@ pod 'YHNetworkTools'
 
 ## Author
 
-2510479687@qq.com, yanglihaut2013@126.com
+yanglihaut2013@126.com
 
 ## License
 

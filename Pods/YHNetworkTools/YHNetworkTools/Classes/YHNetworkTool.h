@@ -8,7 +8,7 @@
 
 #import "YHNetworkClient.h"
 
-typedef void(^YHClientRequestBack)(BOOL requestSuccess, id _Nullable response, NSString* _Nullable responseJson, NSDictionary * _Nullable requestDic);
+typedef void(^YHClientRequestBack)(BOOL requestSuccess, id _Nullable response, NSString *_Nullable responseJson, NSDictionary *_Nullable requestDic,NSString *_Nullable errorMessage);
 
 
 @interface YHNetworkTool : YHNetworkClient

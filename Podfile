@@ -24,7 +24,7 @@ target 'YHArchitecture' do
 #  pod "PYPhotoBrowser"
   pod "WTSafeGuard"
   pod "YHTrackSDK-iOS"
-  pod "YHNetworkTools"
+  pod "YHNetworkTools",'~>0.1.2'
   
   
   target 'YHArchitectureTests' do
