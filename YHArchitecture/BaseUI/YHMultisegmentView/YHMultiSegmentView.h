@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *centerXCons;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *btns;
 @property (weak, nonatomic) IBOutlet UIImageView *indicatorImageView;
+/** 选中文字颜色 */
+@property (nonatomic, strong) UIColor *selectColor;
 
 @property (weak, nonatomic) id<YHMultiSegmentViewDelegate> delegate;
 /** 是否不使用autolayout */

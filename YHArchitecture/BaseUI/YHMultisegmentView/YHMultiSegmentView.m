@@ -76,6 +76,16 @@
     }
 }
 
+- (void)setSelectColor:(UIColor *)selectColor
+{
+    _selectColor = selectColor;
+    for (int i=0; i<self.btns.count; ++i) {
+        UIButton *btn = self.btns[i];
+        [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btn setTitleColor:self.selectColor ?self.selectColor : [UIColor blackColor] forState:UIControlStateSelected];
+    }
+}
+
 - (void)setSelectedSegmentIndex:(NSInteger) index
 {
     [self setSelectedSegmentIndex:index animated:YES];

@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "YHSXRequestControl.h"
+#import "YHButton.h"
 
 @interface FirstViewController ()
 
@@ -30,6 +31,15 @@
 //            ;
 //        }
 //    }];
+    
+    YHButton *button = [[YHButton alloc] initWithFrame:CGRectMake(100, 100, 200, 100)];
+    [self.view addSubview:button];
+    [button setTitle:@"hello" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [button setImagePosition:0 spacing:5];
+    [button addAction:^(UIButton *button) {
+        NSLog(@"点击了hello按钮");
+    }];
 }
 
 
