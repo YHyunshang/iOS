@@ -60,6 +60,7 @@
 		8F6F1FF521EECD45004AB396 /* YHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F1FF421EECD45004AB396 /* YHTextField.m */; };
 		8F6F209422029479004AB396 /* YHTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F209222029479004AB396 /* YHTimeTool.m */; };
 		8F6F2097220294AA004AB396 /* YHDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F2096220294AA004AB396 /* YHDataSource.m */; };
+		8F6F209A2202A0B1004AB396 /* YHGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F20992202A0B1004AB396 /* YHGCDTimer.m */; };
 		B41851B0373933B0A46D3081 /* libPods-YHArchitectureUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69124BE49F621B7D9D20DD07 /* libPods-YHArchitectureUITests.a */; };
 		D79CF363C03269699AB84E06 /* libPods-YHArchitectureTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47603FF239EDC49915AC2C63 /* libPods-YHArchitectureTests.a */; };
 /* End PBXBuildFile section */
@@ -186,6 +187,8 @@
 		8F6F209322029479004AB396 /* YHTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTimeTool.h; sourceTree = "<group>"; };
 		8F6F2095220294A9004AB396 /* YHDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDataSource.h; sourceTree = "<group>"; };
 		8F6F2096220294AA004AB396 /* YHDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDataSource.m; sourceTree = "<group>"; };
+		8F6F20982202A0B1004AB396 /* YHGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHGCDTimer.h; sourceTree = "<group>"; };
+		8F6F20992202A0B1004AB396 /* YHGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHGCDTimer.m; sourceTree = "<group>"; };
 		E2BB21DA3F38658B2F420F71 /* Pods-YHArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHArchitecture.release.xcconfig"; path = "Pods/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -387,6 +390,8 @@
 				8F6F209222029479004AB396 /* YHTimeTool.m */,
 				8F6F2095220294A9004AB396 /* YHDataSource.h */,
 				8F6F2096220294AA004AB396 /* YHDataSource.m */,
+				8F6F20982202A0B1004AB396 /* YHGCDTimer.h */,
+				8F6F20992202A0B1004AB396 /* YHGCDTimer.m */,
 				8F0034972173793400FF837C /* YHConstant.h */,
 				8F00349821737B6800FF837C /* YHArchitecture.pch */,
 			);
@@ -851,6 +856,7 @@
 				8F003496217375CE00FF837C /* UITabBar+TabBarTip.m in Sources */,
 				8F4EFFDC21951F9300A72384 /* YHPickerView.m in Sources */,
 				8F37462D2188065E0034148B /* WebViewJavascriptBridge_JS.m in Sources */,
+				8F6F209A2202A0B1004AB396 /* YHGCDTimer.m in Sources */,
 				8F2E14312186D70300545D39 /* YHUserGuideViewController.m in Sources */,
 				8F6F2097220294AA004AB396 /* YHDataSource.m in Sources */,
 				8F2E141621830C5300545D39 /* YHAppColor.m in Sources */,
