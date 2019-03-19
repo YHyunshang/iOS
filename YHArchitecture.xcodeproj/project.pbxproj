@@ -41,7 +41,7 @@
 		8F2E14312186D70300545D39 /* YHUserGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E14302186D70300545D39 /* YHUserGuideViewController.m */; };
 		8F2E14342186E88C00545D39 /* UIColor+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E14332186E88C00545D39 /* UIColor+Utilities.m */; };
 		8F3746142187FD0B0034148B /* YHTrack_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F3746132187FD0B0034148B /* YHTrack_Data.json */; };
-		8F3746162187FDBF0034148B /* 编码需知.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8F3746152187FDBF0034148B /* 编码需知.txt */; };
+		8F3746162187FDBF0034148B /* 编码需知.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F3746152187FDBF0034148B /* 编码需知.md */; };
 		8F37461A2188000C0034148B /* YHMultiSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746192188000C0034148B /* YHMultiSegmentView.m */; };
 		8F3746292188065E0034148B /* YHJSHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37461C2188065E0034148B /* YHJSHandler.m */; };
 		8F37462A2188065E0034148B /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37461E2188065E0034148B /* WebViewJavascriptBridgeBase.m */; };
@@ -152,7 +152,7 @@
 		8F2E14322186E88C00545D39 /* UIColor+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utilities.h"; sourceTree = "<group>"; };
 		8F2E14332186E88C00545D39 /* UIColor+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utilities.m"; sourceTree = "<group>"; };
 		8F3746132187FD0B0034148B /* YHTrack_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = YHTrack_Data.json; sourceTree = "<group>"; };
-		8F3746152187FDBF0034148B /* 编码需知.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "编码需知.txt"; sourceTree = "<group>"; };
+		8F3746152187FDBF0034148B /* 编码需知.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "编码需知.md"; sourceTree = "<group>"; };
 		8F3746182188000C0034148B /* YHMultiSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHMultiSegmentView.h; sourceTree = "<group>"; };
 		8F3746192188000C0034148B /* YHMultiSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHMultiSegmentView.m; sourceTree = "<group>"; };
 		8F37461C2188065E0034148B /* YHJSHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHJSHandler.m; sourceTree = "<group>"; };
@@ -336,7 +336,7 @@
 				8F1DED0221736E75003F1BC4 /* AppDelegate.h */,
 				8F1DED0321736E75003F1BC4 /* AppDelegate.mm */,
 				8F4EFFE2219571A000A72384 /* Readme.md */,
-				8F3746152187FDBF0034148B /* 编码需知.txt */,
+				8F3746152187FDBF0034148B /* 编码需知.md */,
 				8F1DED0821736E75003F1BC4 /* Main.storyboard */,
 				8F1DED0D21736E75003F1BC4 /* LaunchScreen.storyboard */,
 				8F1DED1021736E75003F1BC4 /* Info.plist */,
@@ -552,7 +552,6 @@
 				8F1DECFB21736E75003F1BC4 /* Sources */,
 				8F1DECFC21736E75003F1BC4 /* Frameworks */,
 				8F1DECFD21736E75003F1BC4 /* Resources */,
-				58FA056722F97AAC2307DAA6 /* [CP] Embed Pods Frameworks */,
 				F201F78F737BF11ABB0D8431 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -572,8 +571,6 @@
 				8F1DED1321736E75003F1BC4 /* Sources */,
 				8F1DED1421736E75003F1BC4 /* Frameworks */,
 				8F1DED1521736E75003F1BC4 /* Resources */,
-				5E63610A22832C03F9A3C931 /* [CP] Embed Pods Frameworks */,
-				D311F0D741FC044F59050CB5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -593,8 +590,6 @@
 				8F1DED1E21736E75003F1BC4 /* Sources */,
 				8F1DED1F21736E75003F1BC4 /* Frameworks */,
 				8F1DED2021736E75003F1BC4 /* Resources */,
-				8F896CFA894FF6A5FB2C5E44 /* [CP] Embed Pods Frameworks */,
-				8028F9AC157E4FB5FDC41B78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -660,7 +655,7 @@
 				8F2E14292186B5B500545D39 /* YHEmptyViewController.xib in Resources */,
 				8F3746142187FD0B0034148B /* YHTrack_Data.json in Resources */,
 				8F4EFFDE21951F9E00A72384 /* YHPickerView.xib in Resources */,
-				8F3746162187FDBF0034148B /* 编码需知.txt in Resources */,
+				8F3746162187FDBF0034148B /* 编码需知.md in Resources */,
 				8F0034B321737DBD00FF837C /* ForthViewController.xib in Resources */,
 				8F0034AE21737DAB00FF837C /* ThirdViewController.xib in Resources */,
 				8F4EFFE3219571A000A72384 /* Readme.md in Resources */,
@@ -707,66 +702,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		58FA056722F97AAC2307DAA6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5E63610A22832C03F9A3C931 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YHArchitectureTests/Pods-YHArchitectureTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8028F9AC157E4FB5FDC41B78 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YHArchitectureUITests/Pods-YHArchitectureUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F896CFA894FF6A5FB2C5E44 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YHArchitectureUITests/Pods-YHArchitectureUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		98AC714747721C7EB1C50F36 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -803,39 +738,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D311F0D741FC044F59050CB5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YHArchitectureTests/Pods-YHArchitectureTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F201F78F737BF11ABB0D8431 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

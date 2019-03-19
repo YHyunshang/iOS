@@ -9,7 +9,7 @@ target 'YHArchitecture' do
   # use_frameworks!
 
   # Pods for YHArchitecture
-
+  #Objective-C
   pod "AFNetworking"
   pod "Masonry"
   pod "SDWebImage"
@@ -25,8 +25,23 @@ target 'YHArchitecture' do
   pod "WTSafeGuard"
   pod "YHTrackSDK-iOS"
   pod "YHNetworkTools",'~>0.1.2'
+  pod "QMUIKit"
+  pod 'MLeaksFinder'
   
-  
+  #Swift
+#  pod 'RxSwift'#函数响应式编程框架
+#  pod 'Moya'#这是一个基于Alamofire的更高层网络请求封装抽象层
+#  pod 'MonkeyKing'#社会化分享框架，
+#  pod 'SwiftyJSON'#很好、很方便地处理JSON数据
+#  pod 'SnapKit'#自动布局框架，类似于Masonry
+#  pod 'Kingfisher'#图片下载、缓存的框架
+#  pod 'ReachabilitySwift'#用来检查应用当前的网络连接状况
+#  pod 'KeychainAccess'#使用Keychain非常方便
+#  pod 'RxDataSources'
+#  pod 'PullToRefresher'#下拉刷新
+#  pod 'SKPhotoBrowser'
+#  pod 'CocoaLumberjack/Swift'#日志
+
   target 'YHArchitectureTests' do
     inherit! :search_paths
     # Pods for testing

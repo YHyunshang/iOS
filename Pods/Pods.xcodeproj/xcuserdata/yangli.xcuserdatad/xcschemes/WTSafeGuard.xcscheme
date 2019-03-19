@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "63A8643F02616D6DD2D109EBC4E0481C"
+               BlueprintIdentifier = "98386E601193837CF46A2FCF35F6BEF9"
                BlueprintName = "WTSafeGuard"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libWTSafeGuard.a">

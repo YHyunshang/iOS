@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5B3DDB4BFF05137895A0B805E006BB04"
+               BlueprintIdentifier = "989E13DD8A56690BD9E9DE4C5854C0E7"
                BlueprintName = "YHTrackSDK-iOS"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libYHTrackSDK-iOS.a">
