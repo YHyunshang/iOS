@@ -1,9 +1,9 @@
 //
 //  YHNetworkClient.m
-//  YHNetworkTool
+//  YHNetClient_Example
 //
-//  Created by Yangli on 2018/10/25.
-//  Copyright © 2018年 永辉. All rights reserved.
+//  Created by Yangli on 2019/4/1.
+//  Copyright © 2019年 2510479687@qq.com. All rights reserved.
 //
 
 #import "YHNetworkClient.h"
@@ -31,13 +31,14 @@ failure(task, error);\
 }]
 
 @interface YHNetworkClient ()
-@property (weak, nonatomic) id<YHNetworkConfig>configuration;
+
+@property (weak, nonatomic) id<YHNetConfig>configuration;
 
 @end
 
 @implementation YHNetworkClient
 
-- (instancetype)initWithConfiguration:(id<YHNetworkConfig>)configuration
+- (instancetype)initWithConfiguration:(id<YHNetConfig>)configuration
 {
     self = [super initWithBaseURL:nil];
     if (self) {
@@ -48,7 +49,6 @@ failure(task, error);\
         self.requestSerializer.timeoutInterval = [configuration requestTimeOut];
     }
     return self;
-    
 }
 
 #pragma mark ============================    config header    ============================

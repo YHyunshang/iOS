@@ -1,57 +1,112 @@
 //
 //  YHNetworkTool.m
-//  YHNetworkTool
+//  YHNetClient_Example
 //
-//  Created by Yangli on 2018/10/25.
-//  Copyright © 2018年 永辉. All rights reserved.
+//  Created by Yangli on 2019/4/1.
+//  Copyright © 2019年 2510479687@qq.com. All rights reserved.
 //
 
 #import "YHNetworkTool.h"
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <YLJsonLib/YLJastor.h>
+
+#ifdef DEBUG
+#define YH_Log(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#else
+#define YH_Log(format, ...)
+#endif
+
+#define YHNETWORK_REQUEST_MACRO(METHOD,HUD) \
+[super METHOD:URLString parameters:parameters success:^(NSURLSessionDataTask * task, id responseObject) { \
+[HUD hideAnimated:YES];\
+NSString *jsonStr;\
+if (responseObject) {\
+jsonStr = [(NSDictionary *)responseObject yy_modelToJSONString];\
+YH_Log(@"jsonStr = %@",jsonStr);\
+}\
+requestBack(YES, responseObject, jsonStr, parameters, nil);\
+} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {\
+[HUD hideAnimated:YES];\
+YH_Log(@"\n请求失败************************\n%@",error);\
+requestBack(NO, nil, nil, parameters, [error localizedDescription]);\
+}]
 
 @implementation YHNetworkTool
 
-- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters requestBack:(YHClientRequestBack)requestBack
+- (MBProgressHUD *)hudFromView:(UIView *)view
 {
+    MBProgressHUD *hud = nil;;
+    if (view) {
+        hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+        hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+        hud.bezelView.backgroundColor = [UIColor clearColor];
+    }
+    return hud;
+}
+
+- (NSURLSessionDataTask *)POST:(NSString *)URLString
+                        inView:(UIView *)view
+                    parameters:(id)parameters
+                   requestBack:(YHClientRequestBack)requestBack
+{
+    return YHNETWORK_REQUEST_MACRO(POST, [self hudFromView:view]);
     return [super POST:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        requestBack(YES, responseObject, nil, parameters, nil);
+        if (responseObject) {
+            NSString *jsonStr = [(NSDictionary *)responseObject yy_modelToJSONString];
+            YH_Log(@"jsonStr = %@",jsonStr);
+        }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        requestBack(NO, nil, nil, parameters,[error.userInfo objectForKey:@"NSLocalizedDescription"]);
+        ;
     }];
 }
 
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters requestBack:(YHClientRequestBack)requestBack
+- (NSURLSessionDataTask *)GET:(NSString *)URLString
+                       inView:(UIView *)view
+                   parameters:(id)parameters
+                  requestBack:(YHClientRequestBack)requestBack
 {
-    return [super GET:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        requestBack(YES, responseObject, nil, parameters, nil);
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        requestBack(NO, nil, nil, parameters, [error.userInfo objectForKey:@"NSLocalizedDescription"]);
-    }];
+    return YHNETWORK_REQUEST_MACRO(GET, [self hudFromView:view]);
 }
 
-- (NSURLSessionDataTask *)DELETE:(NSString *)URLString parameters:(id)parameters requestBack:(YHClientRequestBack)requestBack
+- (NSURLSessionDataTask *)DELETE:(NSString *)URLString
+                          inView:(UIView *)view
+                      parameters:(id)parameters
+                     requestBack:(YHClientRequestBack)requestBack
 {
-    return [super DELETE:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        requestBack(YES, responseObject, nil, parameters, nil);
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        requestBack(NO, nil, nil, parameters, [error.userInfo objectForKey:@"NSLocalizedDescription"]);
-    }];
+    return YHNETWORK_REQUEST_MACRO(DELETE, [self hudFromView:view]);
 }
 
-- (NSURLSessionDataTask *)PUT:(NSString *)URLString parameters:(id)parameters requestBack:(YHClientRequestBack)requestBack
+- (NSURLSessionDataTask *)PUT:(NSString *)URLString
+                       inView:(UIView *)view
+                   parameters:(id)parameters
+                  requestBack:(YHClientRequestBack)requestBack
 {
-    return [super DELETE:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        requestBack(YES, responseObject, nil, parameters, nil);
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        requestBack(NO, nil, nil, parameters, [error.userInfo objectForKey:@"NSLocalizedDescription"]);
-    }];
+    return YHNETWORK_REQUEST_MACRO(PUT, [self hudFromView:view]);
 }
 
-- (NSURLSessionDataTask *)UPLOAD:(NSString *)URLString parameters:(id)parameters constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))block progress:(void (^)(NSProgress *))uploadProgress requestBack:(YHClientRequestBack)requestBack
+- (NSURLSessionDataTask *)UPLOAD:(NSString *)URLString
+                          inView:(UIView *)view
+                      parameters:(id)parameters
+       constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))block
+                        progress:(void (^)(NSProgress *))uploadProgress
+                     requestBack:(YHClientRequestBack)requestBack
 {
-    return [super UPLOAD:URLString parameters:parameters constructingBodyWithBlock:block progress:uploadProgress success:^(NSURLSessionDataTask *task, id responseObject) {
-        requestBack(YES, responseObject, nil, parameters, nil);
+    MBProgressHUD *hud = [self hudFromView:view];
+    return [super UPLOAD:URLString
+              parameters:parameters
+constructingBodyWithBlock:block
+                progress:uploadProgress
+                 success:^(NSURLSessionDataTask *task, id responseObject) {
+                     [hud hideAnimated:YES];
+                     if (responseObject) {
+                         NSString *jsonStr = [(NSDictionary *)responseObject yy_modelToJSONString];
+                         YH_Log(@"jsonStr = %@",jsonStr);
+                     }
+                     requestBack(YES, responseObject, nil, parameters, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        requestBack(NO, nil, nil, parameters, [error.userInfo objectForKey:@"NSLocalizedDescription"]);
+        [hud hideAnimated:YES];
+        YH_Log(@"\n请求失败************************\n%@",error);
+        requestBack(NO, nil, nil, parameters, [error localizedDescription]);
     }];
 }
 

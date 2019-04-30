@@ -2,7 +2,7 @@
 # platform :ios, '8.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
-source 'http://10.0.71.125/yh-b2b/YH-iOS-Specs'  #公司私有库源
+source 'http://gitlab.yonghui.cn/yh-b2b/YH-iOS-Specs'  #公司私有库源
 
 target 'YHArchitecture' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -15,7 +15,7 @@ target 'YHArchitecture' do
   pod "SDWebImage"
 #  pod "MJExtension"
   pod "IQKeyboardManager"
-  pod "YLJsonLib",'~>0.1.7'
+#  pod "YLJsonLib",'~>0.1.7'
   pod "MJRefresh"
   pod "FMDB"   #数据库
   pod "SDCycleScrollView"  #轮播图
@@ -24,10 +24,12 @@ target 'YHArchitecture' do
 #  pod "PYPhotoBrowser"
   pod "WTSafeGuard"
   pod "YHTrackSDK-iOS"
-  pod "YHNetworkTools",'~>0.1.2'
+  pod "YHNetworkTools"
+#  ,'~>0.1.3'
   pod "QMUIKit"
   pod 'MLeaksFinder'
-  
+#  pod 'YLNetClient'
+
   #Swift
 #  pod 'RxSwift'#函数响应式编程框架
 #  pod 'Moya'#这是一个基于Alamofire的更高层网络请求封装抽象层

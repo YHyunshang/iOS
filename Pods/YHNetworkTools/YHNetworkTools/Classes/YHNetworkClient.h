@@ -1,18 +1,18 @@
 //
 //  YHNetworkClient.h
-//  YHNetworkTool
+//  YHNetClient_Example
 //
-//  Created by Yangli on 2018/10/25.
-//  Copyright © 2018年 永辉. All rights reserved.
+//  Created by Yangli on 2019/4/1.
+//  Copyright © 2019年 2510479687@qq.com. All rights reserved.
 //
 
-#import <AFNetworking/AFHTTPSessionManager.h>
-#import "YHNetworkConfig.h"
+#import <AFNetworking/AFNetworking.h>
+#import "YHNetConfig.h"
 
 
 @interface YHNetworkClient : AFHTTPSessionManager
 
-- (instancetype)initWithConfiguration:(id<YHNetworkConfig>)configuration;
+- (instancetype)initWithConfiguration:(id<YHNetConfig>)configuration;
 
 - (NSURLSessionDataTask *)POST:(NSString *)URLString
                     parameters:(id)parameters
