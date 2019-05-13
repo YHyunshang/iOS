@@ -29,21 +29,15 @@
 {
     YHSXRequestControl *request = [YHSXRequestControl sharedRequestControl];
     [MBProgressHUD showHUDAddedTo:view animated:YES];
-    [request POST:@"http://freshserver.dev.ys.yh-test.com/pub/fresh/user/login"
-      parameters:@{@"username":username,@"password":password}
-     requestBack:^(BOOL requestSuccess,
-                   id _Nullable response,
-                   NSString *_Nullable responseJson,
-                   NSDictionary *_Nullable requestDic,
-                   NSString *_Nullable errorMessage) {
-         if (requestSuccess) {
-             YHUserModel *userModel = [[YHUserModel alloc]initWithDictionary:response responseClass:[YHUserModel class]];
-             NSLog(@"%@",userModel);
-             handle(userModel,userModel.yhresponse,requestDic,nil);
-         }else{
-             handle(nil,nil,requestDic,errorMessage);
-         }
-         [MBProgressHUD hideHUDForView:view animated:YES];
+    
+    [request POST:@"http://freshserver.dev.ys.yh-test.com/pub/fresh/user/login" inView:view parameters:@{@"username":username,@"password":password} requestBack:^(BOOL requestSuccess, id  _Nullable response, NSString * _Nullable responseJson, NSDictionary * _Nullable requestDic, NSString * _Nullable errorMessage) {
+        if (requestSuccess) {
+            YHUserModel *userModel = [[YHUserModel alloc]initWithDictionary:response responseClass:[YHUserModel class]];
+            NSLog(@"%@",userModel);
+            handle(userModel,userModel.yhresponse,requestDic,nil);
+        }else{
+            handle(nil,nil,requestDic,errorMessage);
+        }
     }];
 }
 

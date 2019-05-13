@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <YHNetworkTools/YHNetworkConfig.h>
+#import <YHNetworkTools/YHNetConfig.h>
 
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YHSXNetworkConfig : NSObject <YHNetworkConfig>
+@interface YHSXNetworkConfig : NSObject <YHNetConfig>
 
 + (instancetype)sharedConfiguration;
 

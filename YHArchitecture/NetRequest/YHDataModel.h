@@ -6,11 +6,11 @@
 //  Copyright © 2018年 永辉. All rights reserved.
 //
 
-#import "YHResultBase.h"
+#import "YHBaseResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YHDataModel : YHResultBase
+@interface YHDataModel : YHBaseResult
 
 @property (strong, nonatomic) id yhresponse;      //数据
 @property (strong, nonatomic) NSString *message;  //描述

@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '8.0'
+ platform :ios, '8.0'
+inhibit_all_warnings!
 
 source 'https://github.com/CocoaPods/Specs.git'
 source 'http://gitlab.yonghui.cn/yh-b2b/YH-iOS-Specs'  #公司私有库源
@@ -25,6 +26,7 @@ target 'YHArchitecture' do
   pod "WTSafeGuard"
   pod "YHTrackSDK-iOS"
   pod "YHNetworkTools"
+  pod "YHDataSource"
 #  ,'~>0.1.3'
   pod "QMUIKit"
   pod 'MLeaksFinder'

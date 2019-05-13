@@ -75,6 +75,7 @@ code file
 │   ├── SDCycleScrollView       // 轮播图
 │   ├── MBProgressHUD           // 加载loding
 │   ├── YHTrackSDK-iOS          // 埋点封装
+│   ├── YHDataSource            // tableView、collectionView代理封装
 └── └── YHNetworkTools          // 网络库封装
 ```
 
@@ -103,6 +104,7 @@ YHArchitecture.pch|全局头文件管理
 [MLeaksFinder][MLeaksFinder]|内存泄漏检测
 [YHTrackSDK-iOS][YHTrackSDK-iOS]|永辉埋点封装
 [YHNetworkTools][YHNetworkTools]|永辉网络封装库
+[YHDataSource][YHDataSource]|tableView代理封装使用
 
 #### 6 部分控件使用说明
 
@@ -141,6 +143,10 @@ picker.jsonModelPropertyName = @"showProperty";//显示的字段
 ```
 
 #### 7 版本更新说明
+
+###### V0.1.2更新说明
+
+\*增加UITableView、UICollectionView代理封装以及空视图处理工具YHDataSource
 
 ###### V0.1.1更新说明
 

@@ -8,22 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4B0EEF4EE5E96DA02363CDEC /* libPods-YHArchitecture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388EE2C0235A0F83247885F7 /* libPods-YHArchitecture.a */; };
-		8F0034872173725800FF837C /* YHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0034862173725800FF837C /* YHTableViewController.m */; };
 		8F00348A217372A200FF837C /* YHNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F003489217372A200FF837C /* YHNavigationViewController.m */; };
 		8F00348D217372C500FF837C /* YHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F00348C217372C500FF837C /* YHMainViewController.m */; };
 		8F003490217373AD00FF837C /* UITabBarController+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F00348F217373AD00FF837C /* UITabBarController+Additionals.m */; };
-		8F0034932173756400FF837C /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0034922173756400FF837C /* UIView+Size.m */; };
-		8F003496217375CE00FF837C /* UITabBar+TabBarTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F003495217375CE00FF837C /* UITabBar+TabBarTip.m */; };
-		8F0034A321737D8C00FF837C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0034A121737D8C00FF837C /* FirstViewController.m */; };
-		8F0034A421737D8C00FF837C /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0034A221737D8C00FF837C /* FirstViewController.xib */; };
-		8F0034A821737D9B00FF837C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0034A621737D9B00FF837C /* SecondViewController.m */; };
-		8F0034A921737D9B00FF837C /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0034A721737D9B00FF837C /* SecondViewController.xib */; };
 		8F0034AD21737DAB00FF837C /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0034AB21737DAB00FF837C /* ThirdViewController.m */; };
-		8F0034AE21737DAB00FF837C /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0034AC21737DAB00FF837C /* ThirdViewController.xib */; };
 		8F0034B221737DBD00FF837C /* ForthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0034B021737DBD00FF837C /* ForthViewController.m */; };
-		8F0034B321737DBD00FF837C /* ForthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0034B121737DBD00FF837C /* ForthViewController.xib */; };
-		8F0034BB21742E7600FF837C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F0034BA21742E7600FF837C /* Assets.xcassets */; };
-		8F1DED0421736E75003F1BC4 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8F1DED0321736E75003F1BC4 /* AppDelegate.mm */; };
 		8F1DED0A21736E75003F1BC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1DED0821736E75003F1BC4 /* Main.storyboard */; };
 		8F1DED0F21736E75003F1BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1DED0D21736E75003F1BC4 /* LaunchScreen.storyboard */; };
 		8F1DED1221736E75003F1BC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1DED1121736E75003F1BC4 /* main.m */; };
@@ -31,12 +20,8 @@
 		8F1DED2721736E75003F1BC4 /* YHArchitectureUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1DED2621736E75003F1BC4 /* YHArchitectureUITests.m */; };
 		8F2E141621830C5300545D39 /* YHAppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E141521830C5300545D39 /* YHAppColor.m */; };
 		8F2E141921830EF700545D39 /* YHPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E141821830EF700545D39 /* YHPermissionManager.m */; };
-		8F2E141C21831B2900545D39 /* YHCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E141B21831B2900545D39 /* YHCacheManager.m */; };
-		8F2E14202186ABD300545D39 /* YHToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E141F2186ABD300545D39 /* YHToast.m */; };
 		8F2E14242186B40900545D39 /* YHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E14232186B40900545D39 /* YHBaseViewController.m */; };
 		8F2E14282186B5B500545D39 /* YHEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E14262186B5B500545D39 /* YHEmptyViewController.m */; };
-		8F2E14292186B5B500545D39 /* YHEmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2E14272186B5B500545D39 /* YHEmptyViewController.xib */; };
-		8F2E142D2186B88E00545D39 /* YHSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E142B2186B88E00545D39 /* YHSplashViewController.m */; };
 		8F2E142E2186B88E00545D39 /* YHSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2E142C2186B88E00545D39 /* YHSplashViewController.xib */; };
 		8F2E14312186D70300545D39 /* YHUserGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E14302186D70300545D39 /* YHUserGuideViewController.m */; };
 		8F2E14342186E88C00545D39 /* UIColor+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E14332186E88C00545D39 /* UIColor+Utilities.m */; };
@@ -45,73 +30,40 @@
 		8F37461A2188000C0034148B /* YHMultiSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746192188000C0034148B /* YHMultiSegmentView.m */; };
 		8F3746292188065E0034148B /* YHJSHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37461C2188065E0034148B /* YHJSHandler.m */; };
 		8F37462A2188065E0034148B /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37461E2188065E0034148B /* WebViewJavascriptBridgeBase.m */; };
-		8F37462B2188065E0034148B /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37461F2188065E0034148B /* WKWebViewJavascriptBridge.m */; };
 		8F37462C2188065E0034148B /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746202188065E0034148B /* WebViewJavascriptBridge.m */; };
 		8F37462D2188065E0034148B /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746232188065E0034148B /* WebViewJavascriptBridge_JS.m */; };
 		8F37462E2188065E0034148B /* YHBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746262188065E0034148B /* YHBaseWebViewController.m */; };
 		8F49E12E22421EEC0063FE91 /* UITabBar+TabBarTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0C022421EEC0063FE91 /* UITabBar+TabBarTip.m */; };
-		8F49E12F22421EEC0063FE91 /* UIColor+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0C322421EEC0063FE91 /* UIColor+Utilities.m */; };
 		8F49E13022421EEC0063FE91 /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0C422421EEC0063FE91 /* UIView+Size.m */; };
-		8F49E13122421EEC0063FE91 /* UITabBarController+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0C622421EEC0063FE91 /* UITabBarController+Additionals.m */; };
 		8F49E13222421EEC0063FE91 /* YHCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0CD22421EEC0063FE91 /* YHCacheManager.m */; };
-		8F49E13322421EEC0063FE91 /* YHPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0CF22421EEC0063FE91 /* YHPermissionManager.m */; };
-		8F49E13422421EEC0063FE91 /* YHDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0D122421EEC0063FE91 /* YHDataSource.m */; };
-		8F49E13522421EEC0063FE91 /* YHAppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0D222421EEC0063FE91 /* YHAppColor.m */; };
 		8F49E13622421EEC0063FE91 /* YHGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0D422421EEC0063FE91 /* YHGCDTimer.m */; };
-		8F49E13722421EEC0063FE91 /* YHTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0D622421EEC0063FE91 /* YHTimeTool.m */; };
-		8F49E13822421EEC0063FE91 /* 编码需知.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E0D722421EEC0063FE91 /* 编码需知.md */; };
 		8F49E13922421EEC0063FE91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E0D822421EEC0063FE91 /* Assets.xcassets */; };
 		8F49E13A22421EEC0063FE91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E0DA22421EEC0063FE91 /* LaunchScreen.storyboard */; };
 		8F49E13B22421EEC0063FE91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E0DC22421EEC0063FE91 /* Main.storyboard */; };
 		8F49E13C22421EEC0063FE91 /* YHUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0DF22421EEC0063FE91 /* YHUserModel.m */; };
 		8F49E13D22421EEC0063FE91 /* YHSXNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0E022421EEC0063FE91 /* YHSXNetworkConfig.m */; };
 		8F49E13E22421EEC0063FE91 /* YHSXRequestControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0E122421EEC0063FE91 /* YHSXRequestControl.m */; };
-		8F49E13F22421EEC0063FE91 /* YHDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0E622421EEC0063FE91 /* YHDataModel.m */; };
-		8F49E14022421EEC0063FE91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0E722421EEC0063FE91 /* main.m */; };
 		8F49E14122421EEC0063FE91 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0E822421EEC0063FE91 /* AppDelegate.mm */; };
-		8F49E14222421EEC0063FE91 /* YHJSHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0EB22421EEC0063FE91 /* YHJSHandler.m */; };
-		8F49E14322421EEC0063FE91 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0ED22421EEC0063FE91 /* WebViewJavascriptBridgeBase.m */; };
 		8F49E14422421EEC0063FE91 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0EE22421EEC0063FE91 /* WKWebViewJavascriptBridge.m */; };
-		8F49E14522421EEC0063FE91 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0EF22421EEC0063FE91 /* WebViewJavascriptBridge.m */; };
-		8F49E14622421EEC0063FE91 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0F222421EEC0063FE91 /* WebViewJavascriptBridge_JS.m */; };
-		8F49E14722421EEC0063FE91 /* YHBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0F522421EEC0063FE91 /* YHBaseWebViewController.m */; };
-		8F49E14822421EEC0063FE91 /* YHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0F922421EEC0063FE91 /* YHButton.m */; };
 		8F49E14922421EEC0063FE91 /* YHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0FC22421EEC0063FE91 /* YHTextField.m */; };
-		8F49E14A22421EEC0063FE91 /* YHMultiSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0FF22421EEC0063FE91 /* YHMultiSegmentView.m */; };
-		8F49E14B22421EEC0063FE91 /* YHNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E10222421EEC0063FE91 /* YHNavigationViewController.m */; };
-		8F49E14C22421EEC0063FE91 /* YHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E10322421EEC0063FE91 /* YHBaseViewController.m */; };
-		8F49E14D22421EEC0063FE91 /* YHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E10422421EEC0063FE91 /* YHMainViewController.m */; };
 		8F49E14E22421EEC0063FE91 /* YHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E10522421EEC0063FE91 /* YHTableViewController.m */; };
 		8F49E14F22421EEC0063FE91 /* YHEmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E10822421EEC0063FE91 /* YHEmptyViewController.xib */; };
-		8F49E15022421EEC0063FE91 /* YHEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E10C22421EEC0063FE91 /* YHEmptyViewController.m */; };
-		8F49E15122421EEC0063FE91 /* YHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E10E22421EEC0063FE91 /* YHPickerView.m */; };
-		8F49E15222421EEC0063FE91 /* YHPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E10F22421EEC0063FE91 /* YHPickerView.xib */; };
 		8F49E15322421EEC0063FE91 /* YHToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E11222421EEC0063FE91 /* YHToast.m */; };
-		8F49E15422421EEC0063FE91 /* YHTrack_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E11522421EEC0063FE91 /* YHTrack_Data.json */; };
-		8F49E15522421EEC0063FE91 /* YHUserGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E11822421EEC0063FE91 /* YHUserGuideViewController.m */; };
 		8F49E15622421EEC0063FE91 /* YHSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E11B22421EEC0063FE91 /* YHSplashViewController.m */; };
-		8F49E15722421EEC0063FE91 /* YHSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E11C22421EEC0063FE91 /* YHSplashViewController.xib */; };
 		8F49E15822421EEC0063FE91 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E11F22421EEC0063FE91 /* FirstViewController.xib */; };
 		8F49E15922421EEC0063FE91 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E12022421EEC0063FE91 /* FirstViewController.m */; };
 		8F49E15A22421EEC0063FE91 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E12322421EEC0063FE91 /* ThirdViewController.xib */; };
-		8F49E15B22421EEC0063FE91 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E12422421EEC0063FE91 /* ThirdViewController.m */; };
 		8F49E15C22421EEC0063FE91 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E12722421EEC0063FE91 /* SecondViewController.xib */; };
 		8F49E15D22421EEC0063FE91 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E12822421EEC0063FE91 /* SecondViewController.m */; };
 		8F49E15E22421EEC0063FE91 /* ForthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E12A22421EEC0063FE91 /* ForthViewController.xib */; };
-		8F49E15F22421EEC0063FE91 /* ForthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E12B22421EEC0063FE91 /* ForthViewController.m */; };
 		8F49E16022421EEC0063FE91 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E12D22421EEC0063FE91 /* Info.plist */; };
-		8F4E002F2198FB5F00A72384 /* YHSXRequestControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E002A2198FB5E00A72384 /* YHSXRequestControl.m */; };
-		8F4E00302198FB5F00A72384 /* YHUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E002B2198FB5E00A72384 /* YHUserModel.m */; };
 		8F4E00322198FB5F00A72384 /* YHDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E002D2198FB5F00A72384 /* YHDataModel.m */; };
-		8F4E003521991AE000A72384 /* YHSXNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E003421991AE000A72384 /* YHSXNetworkConfig.m */; };
 		8F4EFFDC21951F9300A72384 /* YHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4EFFDB21951F9300A72384 /* YHPickerView.m */; };
 		8F4EFFDE21951F9E00A72384 /* YHPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F4EFFDD21951F9E00A72384 /* YHPickerView.xib */; };
 		8F4EFFE3219571A000A72384 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F4EFFE2219571A000A72384 /* Readme.md */; };
 		8F6F1FF121EEC5FF004AB396 /* YHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F1FF021EEC5FF004AB396 /* YHButton.m */; };
-		8F6F1FF521EECD45004AB396 /* YHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F1FF421EECD45004AB396 /* YHTextField.m */; };
 		8F6F209422029479004AB396 /* YHTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F209222029479004AB396 /* YHTimeTool.m */; };
 		8F6F2097220294AA004AB396 /* YHDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F2096220294AA004AB396 /* YHDataSource.m */; };
-		8F6F209A2202A0B1004AB396 /* YHGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F20992202A0B1004AB396 /* YHGCDTimer.m */; };
 		B41851B0373933B0A46D3081 /* libPods-YHArchitectureUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69124BE49F621B7D9D20DD07 /* libPods-YHArchitectureUITests.a */; };
 		D79CF363C03269699AB84E06 /* libPods-YHArchitectureTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47603FF239EDC49915AC2C63 /* libPods-YHArchitectureTests.a */; };
 /* End PBXBuildFile section */
@@ -1006,7 +958,7 @@
 		8F1DECF721736E75003F1BC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "永辉";
 				TargetAttributes = {
 					8F1DECFE21736E75003F1BC4 = {
@@ -1053,7 +1005,6 @@
 				8F1DED0F21736E75003F1BC4 /* LaunchScreen.storyboard in Resources */,
 				8F49E15822421EEC0063FE91 /* FirstViewController.xib in Resources */,
 				8F49E14F22421EEC0063FE91 /* YHEmptyViewController.xib in Resources */,
-				8F2E14292186B5B500545D39 /* YHEmptyViewController.xib in Resources */,
 				8F49E15A22421EEC0063FE91 /* ThirdViewController.xib in Resources */,
 				8F3746142187FD0B0034148B /* YHTrack_Data.json in Resources */,
 				8F4EFFDE21951F9E00A72384 /* YHPickerView.xib in Resources */,
@@ -1061,21 +1012,12 @@
 				8F49E15E22421EEC0063FE91 /* ForthViewController.xib in Resources */,
 				8F3746162187FDBF0034148B /* 编码需知.md in Resources */,
 				8F49E13B22421EEC0063FE91 /* Main.storyboard in Resources */,
-				8F0034B321737DBD00FF837C /* ForthViewController.xib in Resources */,
 				8F49E16022421EEC0063FE91 /* Info.plist in Resources */,
-				8F49E13822421EEC0063FE91 /* 编码需知.md in Resources */,
-				8F0034AE21737DAB00FF837C /* ThirdViewController.xib in Resources */,
 				8F49E13A22421EEC0063FE91 /* LaunchScreen.storyboard in Resources */,
-				8F49E15422421EEC0063FE91 /* YHTrack_Data.json in Resources */,
 				8F4EFFE3219571A000A72384 /* Readme.md in Resources */,
 				8F1DED0A21736E75003F1BC4 /* Main.storyboard in Resources */,
 				8F2E142E2186B88E00545D39 /* YHSplashViewController.xib in Resources */,
-				8F0034BB21742E7600FF837C /* Assets.xcassets in Resources */,
-				8F49E15222421EEC0063FE91 /* YHPickerView.xib in Resources */,
 				8F49E15C22421EEC0063FE91 /* SecondViewController.xib in Resources */,
-				8F0034A421737D8C00FF837C /* FirstViewController.xib in Resources */,
-				8F0034A921737D9B00FF837C /* SecondViewController.xib in Resources */,
-				8F49E15722421EEC0063FE91 /* YHSplashViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1159,13 +1101,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1188,73 +1128,35 @@
 				8F2E14342186E88C00545D39 /* UIColor+Utilities.m in Sources */,
 				8F0034AD21737DAB00FF837C /* ThirdViewController.m in Sources */,
 				8F49E12E22421EEC0063FE91 /* UITabBar+TabBarTip.m in Sources */,
-				8F6F1FF521EECD45004AB396 /* YHTextField.m in Sources */,
 				8F49E13622421EEC0063FE91 /* YHGCDTimer.m in Sources */,
 				8F37462A2188065E0034148B /* WebViewJavascriptBridgeBase.m in Sources */,
 				8F2E14282186B5B500545D39 /* YHEmptyViewController.m in Sources */,
-				8F003496217375CE00FF837C /* UITabBar+TabBarTip.m in Sources */,
 				8F4EFFDC21951F9300A72384 /* YHPickerView.m in Sources */,
 				8F37462D2188065E0034148B /* WebViewJavascriptBridge_JS.m in Sources */,
-				8F6F209A2202A0B1004AB396 /* YHGCDTimer.m in Sources */,
 				8F2E14312186D70300545D39 /* YHUserGuideViewController.m in Sources */,
-				8F49E13122421EEC0063FE91 /* UITabBarController+Additionals.m in Sources */,
-				8F49E14822421EEC0063FE91 /* YHButton.m in Sources */,
 				8F6F2097220294AA004AB396 /* YHDataSource.m in Sources */,
 				8F2E141621830C5300545D39 /* YHAppColor.m in Sources */,
-				8F49E15F22421EEC0063FE91 /* ForthViewController.m in Sources */,
 				8F00348A217372A200FF837C /* YHNavigationViewController.m in Sources */,
 				8F49E15622421EEC0063FE91 /* YHSplashViewController.m in Sources */,
 				8F49E15322421EEC0063FE91 /* YHToast.m in Sources */,
-				8F2E14202186ABD300545D39 /* YHToast.m in Sources */,
 				8F49E15922421EEC0063FE91 /* FirstViewController.m in Sources */,
-				8F49E12F22421EEC0063FE91 /* UIColor+Utilities.m in Sources */,
 				8F49E14E22421EEC0063FE91 /* YHTableViewController.m in Sources */,
 				8F4E00322198FB5F00A72384 /* YHDataModel.m in Sources */,
 				8F37462E2188065E0034148B /* YHBaseWebViewController.m in Sources */,
 				8F00348D217372C500FF837C /* YHMainViewController.m in Sources */,
 				8F49E13C22421EEC0063FE91 /* YHUserModel.m in Sources */,
-				8F49E15522421EEC0063FE91 /* YHUserGuideViewController.m in Sources */,
 				8F49E14422421EEC0063FE91 /* WKWebViewJavascriptBridge.m in Sources */,
-				8F49E13522421EEC0063FE91 /* YHAppColor.m in Sources */,
 				8F3746292188065E0034148B /* YHJSHandler.m in Sources */,
 				8F49E13D22421EEC0063FE91 /* YHSXNetworkConfig.m in Sources */,
 				8F37461A2188000C0034148B /* YHMultiSegmentView.m in Sources */,
-				8F49E14222421EEC0063FE91 /* YHJSHandler.m in Sources */,
 				8F2E141921830EF700545D39 /* YHPermissionManager.m in Sources */,
-				8F49E14A22421EEC0063FE91 /* YHMultiSegmentView.m in Sources */,
-				8F49E14722421EEC0063FE91 /* YHBaseWebViewController.m in Sources */,
-				8F49E14322421EEC0063FE91 /* WebViewJavascriptBridgeBase.m in Sources */,
-				8F2E141C21831B2900545D39 /* YHCacheManager.m in Sources */,
-				8F49E14B22421EEC0063FE91 /* YHNavigationViewController.m in Sources */,
-				8F49E15022421EEC0063FE91 /* YHEmptyViewController.m in Sources */,
 				8F1DED1221736E75003F1BC4 /* main.m in Sources */,
-				8F49E14622421EEC0063FE91 /* WebViewJavascriptBridge_JS.m in Sources */,
 				8F49E13022421EEC0063FE91 /* UIView+Size.m in Sources */,
 				8F37462C2188065E0034148B /* WebViewJavascriptBridge.m in Sources */,
-				8F49E15122421EEC0063FE91 /* YHPickerView.m in Sources */,
-				8F49E13422421EEC0063FE91 /* YHDataSource.m in Sources */,
-				8F0034872173725800FF837C /* YHTableViewController.m in Sources */,
-				8F49E14022421EEC0063FE91 /* main.m in Sources */,
 				8F6F209422029479004AB396 /* YHTimeTool.m in Sources */,
-				8F4E00302198FB5F00A72384 /* YHUserModel.m in Sources */,
-				8F49E15B22421EEC0063FE91 /* ThirdViewController.m in Sources */,
 				8F49E14122421EEC0063FE91 /* AppDelegate.mm in Sources */,
-				8F49E14D22421EEC0063FE91 /* YHMainViewController.m in Sources */,
 				8F49E13E22421EEC0063FE91 /* YHSXRequestControl.m in Sources */,
-				8F49E13722421EEC0063FE91 /* YHTimeTool.m in Sources */,
 				8F2E14242186B40900545D39 /* YHBaseViewController.m in Sources */,
-				8F0034A321737D8C00FF837C /* FirstViewController.m in Sources */,
-				8F4E003521991AE000A72384 /* YHSXNetworkConfig.m in Sources */,
-				8F49E13322421EEC0063FE91 /* YHPermissionManager.m in Sources */,
-				8F0034A821737D9B00FF837C /* SecondViewController.m in Sources */,
-				8F1DED0421736E75003F1BC4 /* AppDelegate.mm in Sources */,
-				8F2E142D2186B88E00545D39 /* YHSplashViewController.m in Sources */,
-				8F49E14522421EEC0063FE91 /* WebViewJavascriptBridge.m in Sources */,
-				8F49E13F22421EEC0063FE91 /* YHDataModel.m in Sources */,
-				8F4E002F2198FB5F00A72384 /* YHSXRequestControl.m in Sources */,
-				8F49E14C22421EEC0063FE91 /* YHBaseViewController.m in Sources */,
-				8F37462B2188065E0034148B /* WKWebViewJavascriptBridge.m in Sources */,
-				8F0034932173756400FF837C /* UIView+Size.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1339,6 +1241,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1346,6 +1249,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1373,7 +1277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1394,6 +1298,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1401,6 +1306,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1422,7 +1328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
