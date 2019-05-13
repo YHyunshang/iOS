@@ -82,7 +82,7 @@ code file
 #### 5 组件库说明
 ###### a、基础组件
 组件名称|组件说明
-:-:|:-:
+:-|:-
 YHAppColor|应用颜色配置
 YHPermissionManager|常用权限获取
 YHCacheManager|存储管理
@@ -91,7 +91,7 @@ YHArchitecture.pch|全局头文件管理
 
 ###### b、第三方框架
 组件名称|组件说明
-:-:|:-:
+:-|:-
 [AFNetworking][AFNetworking]|iOS网络库
 [Masonry][Masonry]|layout布局框架
 [SDWebImage][SDWebImage]|图片缓存
