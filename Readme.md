@@ -169,6 +169,6 @@ picker.jsonModelPropertyName = @"showProperty";//显示的字段
 [QMUIKit]:https://github.com/Tencent/QMFI_iOS
 [WHDebugTool]:https://github.com/remember17/WHDebugTool
 [MLeaksFinder]:https://github.com/Tencent/MLeaksFinder
-[YHTrackSDK-iOS]:http://10.0.71.125/yangli/YHTrackSDK-iOS.git
-[YHNetworkTools]:http://10.0.71.125/yh-b2b/YHNetworkTools.git
+[YHTrackSDK-iOS]:http://gitlab.yonghui.cn/yangli/YHTrackSDK-iOS.git
+[YHNetworkTools]:http://gitlab.yonghui.cn/yh-b2b/YHNetworkTools.git
 [YHDataSource]:http://gitlab.yonghui.cn/YH-iOS/yhdatasource.git
