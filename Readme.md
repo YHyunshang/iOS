@@ -171,3 +171,4 @@ picker.jsonModelPropertyName = @"showProperty";//显示的字段
 [MLeaksFinder]:https://github.com/Tencent/MLeaksFinder
 [YHTrackSDK-iOS]:http://10.0.71.125/yangli/YHTrackSDK-iOS.git
 [YHNetworkTools]:http://10.0.71.125/yh-b2b/YHNetworkTools.git
+[YHDataSource]:http://gitlab.yonghui.cn/YH-iOS/yhdatasource.git
