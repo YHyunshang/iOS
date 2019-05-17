@@ -37,9 +37,9 @@ NS_ASSUME_NONNULL_END
  @param data <#data description#>
  @param callBack <#callBack description#>
  */
-- (void)jsHandlerGetParamWith:(YHJSHandler*)jsHandler
-                         data:(id)data
-                     callBack:(WVJBResponseCallback)callBack;
+- (void)jsHandlerGetParamWith:(YHJSHandler*_Nonnull)jsHandler
+                         data:(id _Nullable )data
+                     callBack:(WVJBResponseCallback _Nonnull )callBack;
 
 
 /**
@@ -49,9 +49,9 @@ NS_ASSUME_NONNULL_END
  @param data <#data description#>
  @param callBack <#callBack description#>
  */
-- (void)jsHandlerScanCodeWith:(YHJSHandler*)jsHandler
-                         data:(id)data
-                     callBack:(WVJBResponseCallback)callBack;
+- (void)jsHandlerScanCodeWith:(YHJSHandler*_Nonnull)jsHandler
+                         data:(id _Nullable )data
+                     callBack:(WVJBResponseCallback _Nonnull )callBack;
 
 
 /**
@@ -61,9 +61,9 @@ NS_ASSUME_NONNULL_END
  @param data <#data description#>
  @param callBack <#callBack description#>
  */
-- (void)jsHandlerBackPreviousWith:(YHJSHandler*)jsHandler
-                         data:(id)data
-                     callBack:(WVJBResponseCallback)callBack;
+- (void)jsHandlerBackPreviousWith:(YHJSHandler*_Nonnull)jsHandler
+                             data:(id _Nullable )data
+                         callBack:(WVJBResponseCallback _Nonnull )callBack;
 
 
 /**
@@ -73,12 +73,12 @@ NS_ASSUME_NONNULL_END
  @param data <#data description#>
  @param callBack <#callBack description#>
  */
-- (void)jsHandlerRefreshWith:(YHJSHandler*)jsHandler
-                             data:(id)data
-                         callBack:(WVJBResponseCallback)callBack;
+- (void)jsHandlerRefreshWith:(YHJSHandler*_Nonnull)jsHandler
+                        data:(id _Nullable )data
+                    callBack:(WVJBResponseCallback _Nonnull )callBack;
 
-- (void)jsHandlerGoToViewWith:(YHJSHandler*)jsHandler
-                        data:(id)data
-                    callBack:(WVJBResponseCallback)callBack;
+- (void)jsHandlerGoToViewWith:(YHJSHandler*_Nullable)jsHandler
+                         data:(id _Nullable )data
+                     callBack:(WVJBResponseCallback _Nonnull )callBack;
 
 @end

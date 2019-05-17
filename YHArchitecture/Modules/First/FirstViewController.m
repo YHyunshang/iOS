@@ -9,9 +9,11 @@
 #import "FirstViewController.h"
 #import "YHSXRequestControl.h"
 #import "YHButton.h"
+#import "YHMultiSegmentView.h"
 
-@interface FirstViewController ()
-
+@interface FirstViewController ()<YHMultiSegmentViewDelegate>
+/** <#Description#> */
+@property (nonatomic, strong) YHMultiSegmentView *multiSementView;
 @end
 
 @implementation FirstViewController
@@ -32,15 +34,35 @@
 //        }
 //    }];
     
-    YHButton *button = [[YHButton alloc] initWithFrame:CGRectMake(100, 100, 200, 100)];
-    [self.view addSubview:button];
-    [button setTitle:@"hello" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [button setImagePosition:0 spacing:5];
-    [button addAction:^(UIButton *button) {
-        NSLog(@"点击了hello按钮");
-    }];
+//    YHButton *button = [[YHButton alloc] initWithFrame:CGRectMake(100, 100, 200, 100)];
+//    [self.view addSubview:button];
+//    [button setTitle:@"hello" forState:UIControlStateNormal];
+//    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+//    [button setImagePosition:0 spacing:5];
+//    [button addAction:^(UIButton *button) {
+//        NSLog(@"点击了hello按钮");
+//    }];
+    [self configureUI];
+    
 }
 
+- (void)configureUI
+{
+    YHMultiSegmentView *segmentView = [YHMultiSegmentView initWithNib:@"YHMultiSegmentView" owner:self];
+    self.multiSementView = segmentView;
+    self.multiSementView.delegate = self;
+//    segmentView.mj_w = SCREEN_WIDTH;
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
+
+    [headView addSubview:segmentView];
+    
+    [self.view addSubview:headView];
+    [segmentView setSelectedSegmentIndex:0 animated:YES];
+}
+
+- (void)multiSegmentView:(YHMultiSegmentView*)segmentView didChangedIndex:(NSInteger)curIndex oldIndex:(NSInteger)oldIndex
+{
+    YHLog(@"当前index == %ld",(long)curIndex);
+}
 
 @end

@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 #import "YHJSHandler.h"
 
-typedef void(^YHWebViewBlock)(id item);
+typedef void(^YHWebViewBlock)(id _Nullable item);
 
 NS_ASSUME_NONNULL_BEGIN
 

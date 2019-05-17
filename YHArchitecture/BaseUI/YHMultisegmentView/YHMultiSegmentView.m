@@ -9,6 +9,7 @@
 #import "YHMultiSegmentView.h"
 #import "UIColor+Utilities.h"
 
+
 @implementation YHMultiSegmentView
 
 + (instancetype)initWithNib:(NSString*)nibName owner:(id)owner
@@ -46,11 +47,11 @@
         if (self.nonuseAutolayout) {
             if (index==0) {
                 [UIView animateWithDuration:0.2 animations:^{
-                    _indicatorImageView.center = CGPointMake(selectedBtn.center.x, _indicatorImageView.center.y);
+                    self.indicatorImageView.center = CGPointMake(selectedBtn.center.x, self.indicatorImageView.center.y);
                 }];
             }else{
                 [UIView animateWithDuration:0.2 animations:^{
-                    _indicatorImageView.center = CGPointMake(selectedBtn.center.x, _indicatorImageView.center.y);
+                    self.indicatorImageView.center = CGPointMake(selectedBtn.center.x, self.indicatorImageView.center.y);
                 }];
             }
         }else{
@@ -72,6 +73,17 @@
             }else{
                 [self layoutIfNeeded];
             }
+        }
+    }
+}
+
+- (void)setBtnTitles:(NSArray *)btnTitles
+{
+    if (btnTitles) {
+        _btnTitles = btnTitles;
+        for (NSInteger i = 0; i < self.btns.count; i++) {
+            UIButton *btn = self.btns[i];
+            [btn setTitle:btnTitles[i] forState:UIControlStateNormal];
         }
     }
 }

@@ -69,8 +69,8 @@
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(75);
         make.height.mas_equalTo(75);
-        make.centerX.mas_equalTo(_nothingView.mas_centerX);
-        make.centerY.mas_equalTo(_nothingView.mas_centerY).offset(-70);
+        make.centerX.mas_equalTo(self.nothingView.mas_centerX);
+        make.centerY.mas_equalTo(self.nothingView.mas_centerY).offset(-70);
     }];
     
     _nothingTitleLabel = [[UILabel alloc]init];
@@ -78,8 +78,8 @@
     [_nothingTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(200);
         make.height.mas_equalTo(20);
-        make.centerX.mas_equalTo(_nothingView.mas_centerX);
-        make.centerY.mas_equalTo(_nothingView.mas_centerY).offset(12);
+        make.centerX.mas_equalTo(self.nothingView.mas_centerX);
+        make.centerY.mas_equalTo(self.nothingView.mas_centerY).offset(12);
     }];
     
     _nothingTitleLabel.font = [UIFont systemFontOfSize:13];

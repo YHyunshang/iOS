@@ -15,7 +15,7 @@ typedef NS_ENUM(NSInteger,YHButtonImagePosition) {
     YHButtonImagePositionBottom
 };
 
-typedef void(^YHButtonBlock)(UIButton *button);
+typedef void(^YHButtonBlock)(UIButton * _Nonnull button);
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)fullScreen:(BOOL)full;
 
-- (NSInvocation *)callClassName:(NSString *)className staticMethodSelector:(SEL)aSelector params:(void*_Nonnull[])params paramsSize:(int)size;
+- (NSInvocation *)callClassName:(NSString *)className staticMethodSelector:(SEL)aSelector params:(void*_Nonnull[_Nullable])params paramsSize:(int)size;
 
 //显示dataCenter图片的nav标题
 - (void)showDataCenterNavTitle;

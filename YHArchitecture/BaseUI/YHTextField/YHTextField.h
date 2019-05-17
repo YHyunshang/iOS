@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void(^YHTextFieldBlock)(UITextField *textField);
+typedef void(^YHTextFieldBlock)(UITextField * _Nonnull textField);
 
 NS_ASSUME_NONNULL_BEGIN
 

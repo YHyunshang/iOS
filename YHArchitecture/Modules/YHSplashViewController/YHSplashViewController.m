@@ -9,7 +9,6 @@
 #import "YHSplashViewController.h"
 #import "YHUserGuideViewController.h"
 
-
 #define NetWorkTag   111111
 @interface YHSplashViewController ()<UIAlertViewDelegate>
 
@@ -31,21 +30,21 @@
 - (void)selectEnv
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"网络选择" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-    
+
     [alert addAction:[UIAlertAction actionWithTitle:@"生产" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self enterApp];
     }]];
-    
+
     [alert addAction:[UIAlertAction actionWithTitle:@"内网测试" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self enterApp];
     }]];
-    
+
     [alert addAction:[UIAlertAction actionWithTitle:@"外网测试" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self enterApp];
     }]];
-    
+
     [self presentViewController:alert animated:YES completion:^{
-        
+
     }];
 }
 

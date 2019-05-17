@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+Size.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *centerXCons;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *btns;
 @property (weak, nonatomic) IBOutlet UIImageView *indicatorImageView;
+
 /** 选中文字颜色 */
 @property (nonatomic, strong) UIColor *selectColor;
 
@@ -34,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) BOOL nonuseAutolayout;
 /** 当前选择index */
 @property (assign, nonatomic) NSInteger selectedSegmentIndex;
+/** 按钮标题 */
+@property (nonatomic, strong) NSArray *btnTitles;
 
 - (void)setSelectedSegmentIndex:(NSInteger)index animated:(BOOL)animated;
 - (void)segmentBtnClick:(UIButton*)btn;

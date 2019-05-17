@@ -11,7 +11,7 @@
 @protocol YHPickerViewDelegate <NSObject>
 
 @optional
-- (void)getPickerInfo:(id)info infoID:(NSString*)infoID;
+- (void)getPickerInfo:(id _Nonnull )info infoID:(NSString*_Nonnull)infoID;
 
 @end
 

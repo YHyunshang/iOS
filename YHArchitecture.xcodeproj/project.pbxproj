@@ -29,9 +29,6 @@
 		8F3746162187FDBF0034148B /* 编码需知.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F3746152187FDBF0034148B /* 编码需知.md */; };
 		8F37461A2188000C0034148B /* YHMultiSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746192188000C0034148B /* YHMultiSegmentView.m */; };
 		8F3746292188065E0034148B /* YHJSHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37461C2188065E0034148B /* YHJSHandler.m */; };
-		8F37462A2188065E0034148B /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37461E2188065E0034148B /* WebViewJavascriptBridgeBase.m */; };
-		8F37462C2188065E0034148B /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746202188065E0034148B /* WebViewJavascriptBridge.m */; };
-		8F37462D2188065E0034148B /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746232188065E0034148B /* WebViewJavascriptBridge_JS.m */; };
 		8F37462E2188065E0034148B /* YHBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746262188065E0034148B /* YHBaseWebViewController.m */; };
 		8F49E12E22421EEC0063FE91 /* UITabBar+TabBarTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0C022421EEC0063FE91 /* UITabBar+TabBarTip.m */; };
 		8F49E13022421EEC0063FE91 /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0C422421EEC0063FE91 /* UIView+Size.m */; };
@@ -44,7 +41,6 @@
 		8F49E13D22421EEC0063FE91 /* YHSXNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0E022421EEC0063FE91 /* YHSXNetworkConfig.m */; };
 		8F49E13E22421EEC0063FE91 /* YHSXRequestControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0E122421EEC0063FE91 /* YHSXRequestControl.m */; };
 		8F49E14122421EEC0063FE91 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0E822421EEC0063FE91 /* AppDelegate.mm */; };
-		8F49E14422421EEC0063FE91 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0EE22421EEC0063FE91 /* WKWebViewJavascriptBridge.m */; };
 		8F49E14922421EEC0063FE91 /* YHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E0FC22421EEC0063FE91 /* YHTextField.m */; };
 		8F49E14E22421EEC0063FE91 /* YHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E10522421EEC0063FE91 /* YHTableViewController.m */; };
 		8F49E14F22421EEC0063FE91 /* YHEmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E10822421EEC0063FE91 /* YHEmptyViewController.xib */; };
@@ -56,7 +52,6 @@
 		8F49E15C22421EEC0063FE91 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E12722421EEC0063FE91 /* SecondViewController.xib */; };
 		8F49E15D22421EEC0063FE91 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E12822421EEC0063FE91 /* SecondViewController.m */; };
 		8F49E15E22421EEC0063FE91 /* ForthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E12A22421EEC0063FE91 /* ForthViewController.xib */; };
-		8F49E16022421EEC0063FE91 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F49E12D22421EEC0063FE91 /* Info.plist */; };
 		8F4E00322198FB5F00A72384 /* YHDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E002D2198FB5F00A72384 /* YHDataModel.m */; };
 		8F4EFFDC21951F9300A72384 /* YHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4EFFDB21951F9300A72384 /* YHPickerView.m */; };
 		8F4EFFDE21951F9E00A72384 /* YHPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F4EFFDD21951F9E00A72384 /* YHPickerView.xib */; };
@@ -64,6 +59,11 @@
 		8F6F1FF121EEC5FF004AB396 /* YHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F1FF021EEC5FF004AB396 /* YHButton.m */; };
 		8F6F209422029479004AB396 /* YHTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F209222029479004AB396 /* YHTimeTool.m */; };
 		8F6F2097220294AA004AB396 /* YHDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F2096220294AA004AB396 /* YHDataSource.m */; };
+		8FFB5FD1228EBCA8000805A4 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB5FC9228EBCA8000805A4 /* WebViewJavascriptBridgeBase.m */; };
+		8FFB5FD2228EBCA8000805A4 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB5FCA228EBCA8000805A4 /* WKWebViewJavascriptBridge.m */; };
+		8FFB5FD3228EBCA8000805A4 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB5FCB228EBCA8000805A4 /* WebViewJavascriptBridge.m */; };
+		8FFB5FD4228EBCA8000805A4 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB5FCE228EBCA8000805A4 /* WebViewJavascriptBridge_JS.m */; };
+		8FFB5FD6228EBE07000805A4 /* YHMultiSegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFB5FD5228EBE07000805A4 /* YHMultiSegmentView.xib */; };
 		B41851B0373933B0A46D3081 /* libPods-YHArchitectureUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69124BE49F621B7D9D20DD07 /* libPods-YHArchitectureUITests.a */; };
 		D79CF363C03269699AB84E06 /* libPods-YHArchitectureTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47603FF239EDC49915AC2C63 /* libPods-YHArchitectureTests.a */; };
 /* End PBXBuildFile section */
@@ -159,14 +159,6 @@
 		8F3746182188000C0034148B /* YHMultiSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHMultiSegmentView.h; sourceTree = "<group>"; };
 		8F3746192188000C0034148B /* YHMultiSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHMultiSegmentView.m; sourceTree = "<group>"; };
 		8F37461C2188065E0034148B /* YHJSHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHJSHandler.m; sourceTree = "<group>"; };
-		8F37461E2188065E0034148B /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
-		8F37461F2188065E0034148B /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		8F3746202188065E0034148B /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		8F3746212188065E0034148B /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
-		8F3746222188065E0034148B /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
-		8F3746232188065E0034148B /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
-		8F3746242188065E0034148B /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		8F3746252188065E0034148B /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		8F3746262188065E0034148B /* YHBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHBaseWebViewController.m; sourceTree = "<group>"; };
 		8F3746272188065E0034148B /* YHJSHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHJSHandler.h; sourceTree = "<group>"; };
 		8F3746282188065E0034148B /* YHBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHBaseWebViewController.h; sourceTree = "<group>"; };
@@ -282,6 +274,15 @@
 		8F6F2096220294AA004AB396 /* YHDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDataSource.m; sourceTree = "<group>"; };
 		8F6F20982202A0B1004AB396 /* YHGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHGCDTimer.h; sourceTree = "<group>"; };
 		8F6F20992202A0B1004AB396 /* YHGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHGCDTimer.m; sourceTree = "<group>"; };
+		8FFB5FC9228EBCA8000805A4 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		8FFB5FCA228EBCA8000805A4 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		8FFB5FCB228EBCA8000805A4 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		8FFB5FCC228EBCA8000805A4 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		8FFB5FCD228EBCA8000805A4 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		8FFB5FCE228EBCA8000805A4 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		8FFB5FCF228EBCA8000805A4 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		8FFB5FD0228EBCA8000805A4 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		8FFB5FD5228EBE07000805A4 /* YHMultiSegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHMultiSegmentView.xib; sourceTree = "<group>"; };
 		E2BB21DA3F38658B2F420F71 /* Pods-YHArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHArchitecture.release.xcconfig"; path = "Pods/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -574,6 +575,7 @@
 		8F3746172187FFAD0034148B /* YHMultisegmentView */ = {
 			isa = PBXGroup;
 			children = (
+				8FFB5FD5228EBE07000805A4 /* YHMultiSegmentView.xib */,
 				8F3746182188000C0034148B /* YHMultiSegmentView.h */,
 				8F3746192188000C0034148B /* YHMultiSegmentView.m */,
 			);
@@ -583,28 +585,13 @@
 		8F37461B2188065E0034148B /* YHWebView */ = {
 			isa = PBXGroup;
 			children = (
-				8F37461D2188065E0034148B /* WebViewJavascriptBridge */,
+				8FFB5FC8228EBCA8000805A4 /* WebViewJavascriptBridge */,
 				8F3746272188065E0034148B /* YHJSHandler.h */,
 				8F37461C2188065E0034148B /* YHJSHandler.m */,
 				8F3746282188065E0034148B /* YHBaseWebViewController.h */,
 				8F3746262188065E0034148B /* YHBaseWebViewController.m */,
 			);
 			path = YHWebView;
-			sourceTree = "<group>";
-		};
-		8F37461D2188065E0034148B /* WebViewJavascriptBridge */ = {
-			isa = PBXGroup;
-			children = (
-				8F37461E2188065E0034148B /* WebViewJavascriptBridgeBase.m */,
-				8F37461F2188065E0034148B /* WKWebViewJavascriptBridge.m */,
-				8F3746202188065E0034148B /* WebViewJavascriptBridge.m */,
-				8F3746212188065E0034148B /* WebViewJavascriptBridge_JS.h */,
-				8F3746222188065E0034148B /* WebViewJavascriptBridgeBase.h */,
-				8F3746232188065E0034148B /* WebViewJavascriptBridge_JS.m */,
-				8F3746242188065E0034148B /* WebViewJavascriptBridge.h */,
-				8F3746252188065E0034148B /* WKWebViewJavascriptBridge.h */,
-			);
-			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
 		8F49E0BD22421EEC0063FE91 /* YHArchitecture */ = {
@@ -892,6 +879,21 @@
 			path = YHTextField;
 			sourceTree = "<group>";
 		};
+		8FFB5FC8228EBCA8000805A4 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				8FFB5FC9228EBCA8000805A4 /* WebViewJavascriptBridgeBase.m */,
+				8FFB5FCA228EBCA8000805A4 /* WKWebViewJavascriptBridge.m */,
+				8FFB5FCB228EBCA8000805A4 /* WebViewJavascriptBridge.m */,
+				8FFB5FCC228EBCA8000805A4 /* WebViewJavascriptBridge_JS.h */,
+				8FFB5FCD228EBCA8000805A4 /* WebViewJavascriptBridgeBase.h */,
+				8FFB5FCE228EBCA8000805A4 /* WebViewJavascriptBridge_JS.m */,
+				8FFB5FCF228EBCA8000805A4 /* WebViewJavascriptBridge.h */,
+				8FFB5FD0228EBCA8000805A4 /* WKWebViewJavascriptBridge.h */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1012,12 +1014,12 @@
 				8F49E15E22421EEC0063FE91 /* ForthViewController.xib in Resources */,
 				8F3746162187FDBF0034148B /* 编码需知.md in Resources */,
 				8F49E13B22421EEC0063FE91 /* Main.storyboard in Resources */,
-				8F49E16022421EEC0063FE91 /* Info.plist in Resources */,
 				8F49E13A22421EEC0063FE91 /* LaunchScreen.storyboard in Resources */,
 				8F4EFFE3219571A000A72384 /* Readme.md in Resources */,
 				8F1DED0A21736E75003F1BC4 /* Main.storyboard in Resources */,
 				8F2E142E2186B88E00545D39 /* YHSplashViewController.xib in Resources */,
 				8F49E15C22421EEC0063FE91 /* SecondViewController.xib in Resources */,
+				8FFB5FD6228EBE07000805A4 /* YHMultiSegmentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1101,11 +1103,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1120,6 +1124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F49E15D22421EEC0063FE91 /* SecondViewController.m in Sources */,
+				8FFB5FD3228EBCA8000805A4 /* WebViewJavascriptBridge.m in Sources */,
 				8F003490217373AD00FF837C /* UITabBarController+Additionals.m in Sources */,
 				8F0034B221737DBD00FF837C /* ForthViewController.m in Sources */,
 				8F49E13222421EEC0063FE91 /* YHCacheManager.m in Sources */,
@@ -1129,13 +1134,13 @@
 				8F0034AD21737DAB00FF837C /* ThirdViewController.m in Sources */,
 				8F49E12E22421EEC0063FE91 /* UITabBar+TabBarTip.m in Sources */,
 				8F49E13622421EEC0063FE91 /* YHGCDTimer.m in Sources */,
-				8F37462A2188065E0034148B /* WebViewJavascriptBridgeBase.m in Sources */,
 				8F2E14282186B5B500545D39 /* YHEmptyViewController.m in Sources */,
 				8F4EFFDC21951F9300A72384 /* YHPickerView.m in Sources */,
-				8F37462D2188065E0034148B /* WebViewJavascriptBridge_JS.m in Sources */,
 				8F2E14312186D70300545D39 /* YHUserGuideViewController.m in Sources */,
+				8FFB5FD2228EBCA8000805A4 /* WKWebViewJavascriptBridge.m in Sources */,
 				8F6F2097220294AA004AB396 /* YHDataSource.m in Sources */,
 				8F2E141621830C5300545D39 /* YHAppColor.m in Sources */,
+				8FFB5FD4228EBCA8000805A4 /* WebViewJavascriptBridge_JS.m in Sources */,
 				8F00348A217372A200FF837C /* YHNavigationViewController.m in Sources */,
 				8F49E15622421EEC0063FE91 /* YHSplashViewController.m in Sources */,
 				8F49E15322421EEC0063FE91 /* YHToast.m in Sources */,
@@ -1145,14 +1150,13 @@
 				8F37462E2188065E0034148B /* YHBaseWebViewController.m in Sources */,
 				8F00348D217372C500FF837C /* YHMainViewController.m in Sources */,
 				8F49E13C22421EEC0063FE91 /* YHUserModel.m in Sources */,
-				8F49E14422421EEC0063FE91 /* WKWebViewJavascriptBridge.m in Sources */,
 				8F3746292188065E0034148B /* YHJSHandler.m in Sources */,
 				8F49E13D22421EEC0063FE91 /* YHSXNetworkConfig.m in Sources */,
 				8F37461A2188000C0034148B /* YHMultiSegmentView.m in Sources */,
+				8FFB5FD1228EBCA8000805A4 /* WebViewJavascriptBridgeBase.m in Sources */,
 				8F2E141921830EF700545D39 /* YHPermissionManager.m in Sources */,
 				8F1DED1221736E75003F1BC4 /* main.m in Sources */,
 				8F49E13022421EEC0063FE91 /* UIView+Size.m in Sources */,
-				8F37462C2188065E0034148B /* WebViewJavascriptBridge.m in Sources */,
 				8F6F209422029479004AB396 /* YHTimeTool.m in Sources */,
 				8F49E14122421EEC0063FE91 /* AppDelegate.mm in Sources */,
 				8F49E13E22421EEC0063FE91 /* YHSXRequestControl.m in Sources */,

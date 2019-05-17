@@ -12,12 +12,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CLLocationManager.h>
 #import <AVFoundation/AVFoundation.h>
+#import <QMUIKit/QMUIKit.h>
 
-#define PhotoAlertTag 666
-#define LocationAlertTag 667
-#define MCPAlertTag 668
 
-@interface YHPermissionManager ()<UIAlertViewDelegate>
+@interface YHPermissionManager ()
 
 @end
 
@@ -52,7 +50,7 @@
 //跳转设置摄像头权限
 - (void)goToSettingCameraAuthorization
 {
-    NSString *path = @"Privacy&path=CAMERA"; //路径
+    NSString *path = @"prefs:root=Privacy&path=CAMERA"; //路径
     NSURL *url = [NSURL URLWithString:path];
     if ([[UIApplication sharedApplication] canOpenURL:url])
     {
@@ -72,16 +70,16 @@
             ret(YES);
         }
     }else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请打开摄像头" message:@"请在设置中允许程序在运行时获取摄像头权限" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
-        alert.tag = PhotoAlertTag;
-        [alert show];
         
-//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"请打开摄像头" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-//
-//        [alert addAction:[UIAlertAction actionWithTitle:@"请在设置中允许程序在运行时获取摄像头权限" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        }]];
-//
-//        [self presentViewController:alert animated:YES completion:nil];
+        QMUIAlertController *alertController = [[QMUIAlertController alloc]initWithTitle:@"请打开摄像头" message:@"请在设置中允许程序在运行时获取摄像头权限" preferredStyle:QMUIAlertControllerStyleAlert];
+        
+        [alertController addAction:[QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+            ;
+        }]];
+        [alertController addAction:[QMUIAlertAction actionWithTitle:@"设置" style:QMUIAlertActionStyleDefault handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+             [self goToSettingCameraAuthorization];
+        }]];
+        [alertController showWithAnimated:YES];
     }
 }
 /** 验证是否有定位权限，并且showAlert */
@@ -92,19 +90,16 @@
             ret(YES);
         }
     }else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"定位失败" message:@"请在设置中允许程序在运行时获取定位权限" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
-        alert.tag = LocationAlertTag;
-        [alert show];
         
-//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"网络选择" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-//
-//        [alert addAction:[UIAlertAction actionWithTitle:@"生产" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//            [self enterApp];
-//        }]];
-//
-//        [self presentViewController:alert animated:YES completion:^{
-//
-//        }];
+        QMUIAlertController *alertController = [[QMUIAlertController alloc]initWithTitle:@"定位失败" message:@"请在设置中允许程序在运行时获取定位权限" preferredStyle:QMUIAlertControllerStyleAlert];
+        
+        [alertController addAction:[QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+            
+        }]];
+        [alertController addAction:[QMUIAlertAction actionWithTitle:@"设置" style:QMUIAlertActionStyleDefault handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+            [self goToAppAuthorizationListView];
+        }]];
+        [alertController showWithAnimated:YES];
     }
 }
 
@@ -116,41 +111,18 @@
                 ret(YES);
             }
         }else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"获取麦克风权限失败" message:@"请在设置中允许程序获取麦克风权限" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
-            alert.tag = MCPAlertTag;
-            [alert show];
             
-//            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"网络选择" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-//
-//            [alert addAction:[UIAlertAction actionWithTitle:@"生产" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//                [self enterApp];
-//            }]];
-//
-//            [self presentViewController:alert animated:YES completion:^{
-//
-//            }];
+            QMUIAlertController *alertController = [[QMUIAlertController alloc]initWithTitle:@"获取麦克风权限失败" message:@"请在设置中允许程序获取麦克风权限" preferredStyle:QMUIAlertControllerStyleAlert];
+            
+            [alertController addAction:[QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+                ;
+            }]];
+            [alertController addAction:[QMUIAlertAction actionWithTitle:@"设置" style:QMUIAlertActionStyleDefault handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+                [self goToAppAuthorizationListView];
+            }]];
+            [alertController showWithAnimated:YES];
         }
     }];
-}
-
-#pragma mark - UIAlertViewDelegate
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (alertView.tag == PhotoAlertTag) {
-        if (buttonIndex == 1) {
-            [self goToSettingCameraAuthorization];
-        }
-    }
-    if (alertView.tag == LocationAlertTag) {
-        if (buttonIndex == 1) {
-            [self goToAppAuthorizationListView];
-        }
-    }
-    if (alertView.tag == MCPAlertTag) {
-        if (buttonIndex == 1) {
-            [self goToAppAuthorizationListView];
-        }
-    }
 }
 
 
