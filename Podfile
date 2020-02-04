@@ -28,7 +28,7 @@ target 'YHArchitecture' do
   pod "YHNetworkTools"
   pod "YHDataSource"
 #  ,'~>0.1.3'
-  pod "QMUIKit"
+#  pod "QMUIKit"
   pod "MLeaksFinder"
 #  pod 'YLNetClient'
 

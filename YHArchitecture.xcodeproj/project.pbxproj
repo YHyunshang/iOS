@@ -56,6 +56,9 @@
 		8F4EFFDC21951F9300A72384 /* YHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4EFFDB21951F9300A72384 /* YHPickerView.m */; };
 		8F4EFFDE21951F9E00A72384 /* YHPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F4EFFDD21951F9E00A72384 /* YHPickerView.xib */; };
 		8F4EFFE3219571A000A72384 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F4EFFE2219571A000A72384 /* Readme.md */; };
+		8F6EDA6E23E91F52001C0ECF /* NSArray+YHLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6EDA6D23E91F52001C0ECF /* NSArray+YHLog.m */; };
+		8F6EDA7123E91FA5001C0ECF /* NSDictionary+YHLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6EDA7023E91FA5001C0ECF /* NSDictionary+YHLog.m */; };
+		8F6EDA7423E92214001C0ECF /* YHUserDefaultUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6EDA7323E92214001C0ECF /* YHUserDefaultUtil.m */; };
 		8F6F1FF121EEC5FF004AB396 /* YHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F1FF021EEC5FF004AB396 /* YHButton.m */; };
 		8F6F209422029479004AB396 /* YHTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F209222029479004AB396 /* YHTimeTool.m */; };
 		8F6F2097220294AA004AB396 /* YHDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F2096220294AA004AB396 /* YHDataSource.m */; };
@@ -264,6 +267,12 @@
 		8F4EFFDB21951F9300A72384 /* YHPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHPickerView.m; sourceTree = "<group>"; };
 		8F4EFFDD21951F9E00A72384 /* YHPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YHPickerView.xib; sourceTree = "<group>"; };
 		8F4EFFE2219571A000A72384 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = SOURCE_ROOT; };
+		8F6EDA6C23E91F52001C0ECF /* NSArray+YHLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+YHLog.h"; sourceTree = "<group>"; };
+		8F6EDA6D23E91F52001C0ECF /* NSArray+YHLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YHLog.m"; sourceTree = "<group>"; };
+		8F6EDA6F23E91FA5001C0ECF /* NSDictionary+YHLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YHLog.h"; sourceTree = "<group>"; };
+		8F6EDA7023E91FA5001C0ECF /* NSDictionary+YHLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YHLog.m"; sourceTree = "<group>"; };
+		8F6EDA7223E92213001C0ECF /* YHUserDefaultUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHUserDefaultUtil.h; sourceTree = "<group>"; };
+		8F6EDA7323E92214001C0ECF /* YHUserDefaultUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHUserDefaultUtil.m; sourceTree = "<group>"; };
 		8F6F1FEF21EEC5FF004AB396 /* YHButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHButton.h; sourceTree = "<group>"; };
 		8F6F1FF021EEC5FF004AB396 /* YHButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHButton.m; sourceTree = "<group>"; };
 		8F6F1FF321EECD45004AB396 /* YHTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTextField.h; sourceTree = "<group>"; };
@@ -427,6 +436,7 @@
 				8F1DED3621736EB8003F1BC4 /* Extension */,
 				8F1DED3521736EAB003F1BC4 /* Config */,
 				8F1DED3421736E9E003F1BC4 /* BaseUI */,
+				8F6EDA6B23E91F0E001C0ECF /* Category */,
 				8F1DED0221736E75003F1BC4 /* AppDelegate.h */,
 				8F1DED0321736E75003F1BC4 /* AppDelegate.mm */,
 				8F4EFFE2219571A000A72384 /* Readme.md */,
@@ -475,6 +485,8 @@
 		8F1DED3521736EAB003F1BC4 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				8F6EDA7223E92213001C0ECF /* YHUserDefaultUtil.h */,
+				8F6EDA7323E92214001C0ECF /* YHUserDefaultUtil.m */,
 				8F2E141421830C5300545D39 /* YHAppColor.h */,
 				8F2E141521830C5300545D39 /* YHAppColor.m */,
 				8F2E141721830EF700545D39 /* YHPermissionManager.h */,
@@ -861,6 +873,17 @@
 			path = YHPickerView;
 			sourceTree = "<group>";
 		};
+		8F6EDA6B23E91F0E001C0ECF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8F6EDA6C23E91F52001C0ECF /* NSArray+YHLog.h */,
+				8F6EDA6D23E91F52001C0ECF /* NSArray+YHLog.m */,
+				8F6EDA6F23E91FA5001C0ECF /* NSDictionary+YHLog.h */,
+				8F6EDA7023E91FA5001C0ECF /* NSDictionary+YHLog.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		8F6F1FEE21EEC32A004AB396 /* YHButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1103,13 +1126,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1143,6 +1164,7 @@
 				8FFB5FD4228EBCA8000805A4 /* WebViewJavascriptBridge_JS.m in Sources */,
 				8F00348A217372A200FF837C /* YHNavigationViewController.m in Sources */,
 				8F49E15622421EEC0063FE91 /* YHSplashViewController.m in Sources */,
+				8F6EDA7423E92214001C0ECF /* YHUserDefaultUtil.m in Sources */,
 				8F49E15322421EEC0063FE91 /* YHToast.m in Sources */,
 				8F49E15922421EEC0063FE91 /* FirstViewController.m in Sources */,
 				8F49E14E22421EEC0063FE91 /* YHTableViewController.m in Sources */,
@@ -1159,7 +1181,9 @@
 				8F49E13022421EEC0063FE91 /* UIView+Size.m in Sources */,
 				8F6F209422029479004AB396 /* YHTimeTool.m in Sources */,
 				8F49E14122421EEC0063FE91 /* AppDelegate.mm in Sources */,
+				8F6EDA7123E91FA5001C0ECF /* NSDictionary+YHLog.m in Sources */,
 				8F49E13E22421EEC0063FE91 /* YHSXRequestControl.m in Sources */,
+				8F6EDA6E23E91F52001C0ECF /* NSArray+YHLog.m in Sources */,
 				8F2E14242186B40900545D39 /* YHBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

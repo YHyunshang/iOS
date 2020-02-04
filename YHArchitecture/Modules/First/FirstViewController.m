@@ -51,7 +51,6 @@
     YHMultiSegmentView *segmentView = [YHMultiSegmentView initWithNib:@"YHMultiSegmentView" owner:self];
     self.multiSementView = segmentView;
     self.multiSementView.delegate = self;
-//    segmentView.mj_w = SCREEN_WIDTH;
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
 
     [headView addSubview:segmentView];

@@ -12,7 +12,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CLLocationManager.h>
 #import <AVFoundation/AVFoundation.h>
-#import <QMUIKit/QMUIKit.h>
 
 
 @interface YHPermissionManager ()
@@ -71,15 +70,14 @@
         }
     }else{
         
-        QMUIAlertController *alertController = [[QMUIAlertController alloc]initWithTitle:@"请打开摄像头" message:@"请在设置中允许程序在运行时获取摄像头权限" preferredStyle:QMUIAlertControllerStyleAlert];
-        
-        [alertController addAction:[QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"请允许访问相册" message:@"请在设置中允许程序在运行时访问相册权限" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             ;
         }]];
-        [alertController addAction:[QMUIAlertAction actionWithTitle:@"设置" style:QMUIAlertActionStyleDefault handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
-             [self goToSettingCameraAuthorization];
+        [alert addAction:[UIAlertAction actionWithTitle:@"设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self goToAppAuthorizationListView];
         }]];
-        [alertController showWithAnimated:YES];
+        [RootTabbarViewConTroller presentViewController:alert animated:YES completion:nil];
     }
 }
 /** 验证是否有定位权限，并且showAlert */
@@ -91,15 +89,14 @@
         }
     }else{
         
-        QMUIAlertController *alertController = [[QMUIAlertController alloc]initWithTitle:@"定位失败" message:@"请在设置中允许程序在运行时获取定位权限" preferredStyle:QMUIAlertControllerStyleAlert];
-        
-        [alertController addAction:[QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
-            
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"定位失败" message:@"请在设置中允许程序在运行时获取定位权限" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            ;
         }]];
-        [alertController addAction:[QMUIAlertAction actionWithTitle:@"设置" style:QMUIAlertActionStyleDefault handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+        [alert addAction:[UIAlertAction actionWithTitle:@"设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self goToAppAuthorizationListView];
         }]];
-        [alertController showWithAnimated:YES];
+        [RootTabbarViewConTroller presentViewController:alert animated:YES completion:nil];
     }
 }
 
@@ -112,15 +109,14 @@
             }
         }else{
             
-            QMUIAlertController *alertController = [[QMUIAlertController alloc]initWithTitle:@"获取麦克风权限失败" message:@"请在设置中允许程序获取麦克风权限" preferredStyle:QMUIAlertControllerStyleAlert];
-            
-            [alertController addAction:[QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"获取麦克风权限失败" message:@"请在设置中允许程序获取麦克风权限" preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 ;
             }]];
-            [alertController addAction:[QMUIAlertAction actionWithTitle:@"设置" style:QMUIAlertActionStyleDefault handler:^(__kindof QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+            [alert addAction:[UIAlertAction actionWithTitle:@"设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [self goToAppAuthorizationListView];
             }]];
-            [alertController showWithAnimated:YES];
+            [RootTabbarViewConTroller presentViewController:alert animated:YES completion:nil];
         }
     }];
 }
