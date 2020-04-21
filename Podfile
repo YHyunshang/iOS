@@ -21,7 +21,7 @@ target 'YHArchitecture' do
   pod "MBProgressHUD"
   pod "WHDebugTool"
 #  pod "PYPhotoBrowser"
-#  pod "WTSafeGuard"
+  pod "LSSafeProtector"
   pod "YHTrackSDK-iOS"
   pod "YHNetworkTools"
   pod "YHDataSource"

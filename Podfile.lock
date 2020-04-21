@@ -22,6 +22,16 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - IQKeyboardManager (6.2.1)
+  - LSSafeProtector (2.1.4):
+    - LSSafeProtector/Core (= 2.1.4)
+    - LSSafeProtector/Foundation (= 2.1.4)
+    - LSSafeProtector/MRC (= 2.1.4)
+  - LSSafeProtector/Core (2.1.4)
+  - LSSafeProtector/Foundation (2.1.4):
+    - LSSafeProtector/Core
+  - LSSafeProtector/MRC (2.1.4):
+    - LSSafeProtector/Core
+    - LSSafeProtector/Foundation
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.1.16)
@@ -50,6 +60,7 @@ DEPENDENCIES:
   - AppOrderFiles
   - FMDB
   - IQKeyboardManager
+  - LSSafeProtector
   - Masonry
   - MBProgressHUD
   - MJRefresh
@@ -72,6 +83,7 @@ SPEC REPOS:
     - FLAnimatedImage
     - FMDB
     - IQKeyboardManager
+    - LSSafeProtector
     - Masonry
     - MBProgressHUD
     - MJRefresh
@@ -94,6 +106,7 @@ SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
+  LSSafeProtector: b2e6c263079d365967cc4d19817b38291b5fcbe6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
@@ -108,6 +121,6 @@ SPEC CHECKSUMS:
   YHTrackSDK-iOS: 21fd5de4f7e546d24c1f1cda20d87ea3054cbeb6
   YLJsonLib: 33f55d1aae8a701de15d4004f2c22c44111116eb
 
-PODFILE CHECKSUM: 57892336d121d91d0665d56118e84dc6b067067b
+PODFILE CHECKSUM: bcee4ce280be067140bec3ee4b0aaf07ad15f7f3
 
 COCOAPODS: 1.9.1
