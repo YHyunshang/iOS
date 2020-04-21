@@ -14,13 +14,14 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - AppOrderFiles (1.0.1)
   - DZNEmptyDataSet (1.8.1)
   - FBRetainCycleDetector (0.1.4)
+  - FLAnimatedImage (1.0.12)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - IQKeyboardManager (6.2.1)
-  - JRSwizzle (1.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.1.16)
@@ -31,9 +32,10 @@ PODS:
   - SDWebImage (5.0.2):
     - SDWebImage/Core (= 5.0.2)
   - SDWebImage/Core (5.0.2)
+  - WebViewJavascriptBridge (6.0.3)
   - WHDebugTool (1.7)
-  - WTSafeGuard (1.3.1):
-    - JRSwizzle
+  - XHLaunchAd (3.9.11):
+    - FLAnimatedImage (~> 1.0.12)
   - YHDataSource (0.2.1):
     - DZNEmptyDataSet (~> 1.8.1)
   - YHNetworkTools (0.1.4):
@@ -45,6 +47,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - AppOrderFiles
   - FMDB
   - IQKeyboardManager
   - Masonry
@@ -53,28 +56,31 @@ DEPENDENCIES:
   - MLeaksFinder
   - SDCycleScrollView
   - SDWebImage
+  - WebViewJavascriptBridge
   - WHDebugTool
-  - WTSafeGuard
+  - XHLaunchAd
   - YHDataSource
   - YHNetworkTools
   - YHTrackSDK-iOS
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - AppOrderFiles
     - DZNEmptyDataSet
     - FBRetainCycleDetector
+    - FLAnimatedImage
     - FMDB
     - IQKeyboardManager
-    - JRSwizzle
     - Masonry
     - MBProgressHUD
     - MJRefresh
     - MLeaksFinder
     - SDCycleScrollView
     - SDWebImage
+    - WebViewJavascriptBridge
     - WHDebugTool
-    - WTSafeGuard
+    - XHLaunchAd
     - YHDataSource
     - YHNetworkTools
     - YHTrackSDK-iOS
@@ -82,24 +88,26 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AppOrderFiles: de78939f1a480a6337f304fc2923b97c7e22276b
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
-  JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   WHDebugTool: b3491d564804496891464c3df69543eb6e50621d
-  WTSafeGuard: b849e1ef4bc0750a92b3e408adc1e84643ec7034
+  XHLaunchAd: 9d4abeca598c4262e9df10dd3346b07b9fe40926
   YHDataSource: 3e04b3fb90b3a7a493a4db8f4d620dfdfeb18389
   YHNetworkTools: 94c07d7bbcf3a8befacaced5a1bef699579f7a7b
   YHTrackSDK-iOS: 21fd5de4f7e546d24c1f1cda20d87ea3054cbeb6
   YLJsonLib: 33f55d1aae8a701de15d4004f2c22c44111116eb
 
-PODFILE CHECKSUM: 22b5fad93cb72dc617eb7ba34cd8e43d5a2e3034
+PODFILE CHECKSUM: 57892336d121d91d0665d56118e84dc6b067067b
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.1

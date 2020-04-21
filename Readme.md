@@ -166,7 +166,6 @@ picker.jsonModelPropertyName = @"showProperty";//显示的字段
 [MJRefresh]:https://github.com/CoderMJLee/MJRefresh
 [SDCycleScrollView]:https://github.com/gsdios/SDCycleScrollView
 [MBProgressHUD]:https://github.com/jdg/MBProgressHUD
-[QMUIKit]:https://github.com/Tencent/QMFI_iOS
 [WHDebugTool]:https://github.com/remember17/WHDebugTool
 [MLeaksFinder]:https://github.com/Tencent/MLeaksFinder
 [YHTrackSDK-iOS]:http://gitlab.yonghui.cn/yangli/YHTrackSDK-iOS.git

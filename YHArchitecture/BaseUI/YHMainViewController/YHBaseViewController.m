@@ -19,13 +19,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
 - (UITableView *)mainTableView
 {
     if (!_mainTableView) {
-        _mainTableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+        _mainTableView = [[YHBaseTableView alloc]initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         [self.view addSubview:_mainTableView];
         _mainTableView.sectionHeaderHeight = 0.01;
         _mainTableView.sectionFooterHeight = 0.01;

@@ -14,22 +14,21 @@ target 'YHArchitecture' do
   pod "AFNetworking"
   pod "Masonry"
   pod "SDWebImage"
-#  pod "MJExtension"
   pod "IQKeyboardManager"
-#  pod "YLJsonLib",'~>0.1.7'
   pod "MJRefresh"
   pod "FMDB"   #数据库
   pod "SDCycleScrollView"  #轮播图
   pod "MBProgressHUD"
   pod "WHDebugTool"
 #  pod "PYPhotoBrowser"
-  pod "WTSafeGuard"
+#  pod "WTSafeGuard"
   pod "YHTrackSDK-iOS"
   pod "YHNetworkTools"
   pod "YHDataSource"
-#  ,'~>0.1.3'
-#  pod "QMUIKit"
   pod "MLeaksFinder"
+  pod 'AppOrderFiles'
+  pod 'WebViewJavascriptBridge'
+  pod 'XHLaunchAd'
 #  pod 'YLNetClient'
 
   #Swift
@@ -45,6 +44,7 @@ target 'YHArchitecture' do
 #  pod 'PullToRefresher'#下拉刷新
 #  pod 'SKPhotoBrowser'
 #  pod 'CocoaLumberjack/Swift'#日志
+#  pod "SkeletonView"#骨架屏
 
   target 'YHArchitectureTests' do
     inherit! :search_paths

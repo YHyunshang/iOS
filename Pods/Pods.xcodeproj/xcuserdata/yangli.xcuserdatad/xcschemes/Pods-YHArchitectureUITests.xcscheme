@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "674BD6A22D06869D0DFCB722442B0771"
+               BlueprintIdentifier = "EF2CB0809631FA8D226F1A58F17E9B1A"
                BuildableName = "libPods-YHArchitectureUITests.a"
                BlueprintName = "Pods-YHArchitectureUITests"
                ReferencedContainer = "container:Pods.xcodeproj">

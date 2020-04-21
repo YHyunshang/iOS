@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YHBaseTableView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YHBaseViewController : UIViewController
-@property (strong,nonatomic) UITableView *mainTableView;
+@property (strong,nonatomic) YHBaseTableView *mainTableView;
 @property (strong, nonatomic) UIView *nothingView;
 @property (strong, nonatomic) UILabel *nothingTitleLabel;
 

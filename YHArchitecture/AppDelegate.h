@@ -11,8 +11,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-/** 控制app的展示效果,1为正常app  0，nil为审核版app */
-@property (nonatomic, assign) BOOL page;
+
 
 + (AppDelegate *)appDelegate;
 
