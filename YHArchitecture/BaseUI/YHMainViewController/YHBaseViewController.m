@@ -8,7 +8,6 @@
 
 #import "YHBaseViewController.h"
 #import "YHEmptyViewController.h"
-#define NoContentViewTag 0x010101010101
 
 @interface YHBaseViewController ()
 
@@ -19,7 +18,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
 }
 
 - (UITableView *)mainTableView
@@ -45,48 +43,93 @@
         _mainTableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
         _mainTableView.delegate = (id<UITableViewDelegate>)self;
         _mainTableView.dataSource = (id<UITableViewDataSource>)self;
-
     }
     return _mainTableView;
 }
 
+- (UIView *)baseNothingV
+{
+    if (!_baseNothingV) {
+        _baseNothingV = [UIView new];
+    }
+    return _baseNothingV;
+}
+
+- (UILabel *)baseNothingTitleLb
+{
+    if (!_baseNothingTitleLb) {
+        _baseNothingTitleLb = [[UILabel alloc]init];
+        _baseNothingTitleLb.font = [UIFont systemFontOfSize:13];
+        _baseNothingTitleLb.textAlignment = NSTextAlignmentCenter;
+        _baseNothingTitleLb.textColor = YHHexColor(@"4A4A4A");
+        _baseNothingTitleLb.font = [UIFont systemFontOfSize:16];
+        _baseNothingTitleLb.textAlignment = NSTextAlignmentCenter;
+        _baseNothingTitleLb.numberOfLines = 1;
+        [_baseNothingTitleLb sizeToFit];
+    }
+    return _baseNothingTitleLb;
+}
+
+- (YHButton *)baseGotoBtn
+{
+    if (!_baseGotoBtn) {
+        _baseGotoBtn = [YHButton buttonWithType:UIButtonTypeSystem];
+        _baseGotoBtn.backgroundColor = YHHexColor(@"#41B25D");
+        _baseGotoBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        _baseGotoBtn.layer.cornerRadius = 17.5;
+        _baseGotoBtn.hidden = YES;
+    }
+    return _baseGotoBtn;
+}
 
 - (void)createNothingView
 {
-    [self createNothingViewOnView:self.view];
+    [self createNothingViewOnView:self.view imageName:@""];
 }
 
-- (void)createNothingViewOnView:(UIView *)view
+- (void)createNothingViewOnView:(UIView *)view imageName:(NSString *)imageName
 {
-    _nothingView = [[UIView alloc]init];
-    [view addSubview:_nothingView];
-    [_nothingView mas_makeConstraints:^(MASConstraintMaker *make) {
+    //添加视图
+    [view addSubview:self.baseNothingV];
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:YHImage(imageName)];
+    [self.baseNothingV addSubview:imageView];
+    [self.baseNothingV addSubview:self.baseNothingTitleLb];
+    UILabel *label = [[UILabel alloc]init];
+    label.text = @"看看其他的吧";
+    label.textColor = YHHexColor(@"A4A4B4");
+    label.font = [UIFont systemFontOfSize:14];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.numberOfLines = 1;
+    [label sizeToFit];
+    [self.baseNothingV addSubview:label];
+    [self.baseNothingV addSubview:self.baseGotoBtn];
+    
+    //布局
+    [self.baseNothingV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
-    
-    UIImageView *imageView = [[UIImageView alloc]init];
-    [_nothingView addSubview:imageView];
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(75);
-        make.height.mas_equalTo(75);
-        make.centerX.mas_equalTo(self.nothingView.mas_centerX);
-        make.centerY.mas_equalTo(self.nothingView.mas_centerY).offset(-70);
+        make.size.mas_equalTo(CGSizeMake(190, 190));
+        make.centerX.mas_equalTo(self.baseNothingV.mas_centerX);
+        make.centerY.mas_equalTo(self.baseNothingV.mas_centerY).offset(-170);
+    }];
+    [self.baseNothingV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(imageView.mas_bottom);
+        make.centerX.mas_equalTo(self.baseNothingV.mas_centerX);
+    }];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.baseNothingTitleLb.mas_bottom).mas_offset(16);
+        make.centerX.mas_equalTo(self.baseNothingV.mas_centerX);
+    }];
+    [self.baseGotoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(110, 35));
+        make.top.mas_equalTo(label.mas_bottom).mas_offset(13);
+        make.centerX.mas_equalTo(0);
     }];
     
-    _nothingTitleLabel = [[UILabel alloc]init];
-    [_nothingView addSubview:_nothingTitleLabel];
-    [_nothingTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(200);
-        make.height.mas_equalTo(20);
-        make.centerX.mas_equalTo(self.nothingView.mas_centerX);
-        make.centerY.mas_equalTo(self.nothingView.mas_centerY).offset(12);
-    }];
-    
-    _nothingTitleLabel.font = [UIFont systemFontOfSize:13];
-    _nothingTitleLabel.textAlignment = NSTextAlignmentCenter;
-    _nothingView.hidden = YES;
+    //设置隐藏
+    self.baseNothingV.hidden = YES;
 }
-
 
 - (void)fullScreen:(BOOL)full
 {
@@ -135,51 +178,6 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
-}
-
-/**
- *  显示或隐藏没有数据提示view
- */
-- (void)showOrHideNoContentView:(BOOL)show
-{
-    UIView *view = [self.view viewWithTag:NoContentViewTag];
-    if (show) {
-        if (view) {
-            [self.view bringSubviewToFront:view];
-            view.hidden = NO;
-        } else {
-            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
-            label.text = @"数据为空~";
-            label.textColor = [UIColor darkGrayColor];
-            label.center = CGPointMake(self.view.center.x, 100);
-            label.textAlignment = NSTextAlignmentCenter;
-            label.tag = NoContentViewTag;
-            [self.view addSubview:label];
-        }
-    } else {
-        if (view) {
-            view.hidden = YES;
-        }
-    }
-}
-
-/** 显示火隐藏没有数据提示的view */
-+ (void)ifShowEnptyView:(BOOL)show inView:(UIView*)view
-{
-    if (show) {
-        UIView *emptyView = [view viewWithTag:12345678910];
-        if (!emptyView) {
-            YHEmptyViewController *emptyVc = [[YHEmptyViewController alloc] init];
-            emptyVc.view.tag = 12345678910;
-            emptyVc.view.frame = view.frame;
-            [view addSubview:emptyVc.view];
-        }
-    }else{
-        UIView *emptyView = [view viewWithTag:12345678910];
-        if (emptyView) {
-            [emptyView removeFromSuperview];
-        }
-    }
 }
 
 + (void)gotoEmptyControllerWithTitle:(NSString*)title

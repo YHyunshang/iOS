@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
 + (AppDelegate *)appDelegate;
 
 @end

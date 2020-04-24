@@ -8,9 +8,13 @@
 
 #import "YHUserGuideViewController.h"
 #define GUIDE_IMAGES @[@"guide01",@"guide02",@"guide03",@"guide04",@"guide05"]
+#define GUIDE_BUTTONHEIGHT  30
 
 @interface YHUserGuideViewController ()<UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
-@property (strong,nonatomic) UIButton *button;
+/** collectionView */
+@property (nonatomic, strong) UICollectionView *collectionView;
+/** skipBtn */
+@property (strong,nonatomic) UIButton *skipBtn;
 
 @end
 
@@ -19,29 +23,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initCollectionView];
+    [self addSubViews];
 }
 
-- (void)initCollectionView
+- (void)addSubViews
 {
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    layout.itemSize = [UIScreen mainScreen].bounds.size;
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    //行距
-    layout.minimumLineSpacing = 0;
-    // 间距
-    layout.minimumInteritemSpacing = 0;
-    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
-    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-    collectionView.dataSource = self;
-    [collectionView setPagingEnabled:YES];
-    [self.view addSubview:collectionView];
-    collectionView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.collectionView];
+    [self.view addSubview:self.skipBtn];
     
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    [button addTarget:self action:@selector(disMissGuideView) forControlEvents:UIControlEventTouchUpInside];
-    self.button = button;
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.view);
+    }];
+    [self.skipBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(80);
+        make.right.mas_equalTo(-30);
+        make.size.mas_equalTo(CGSizeMake(75, GUIDE_BUTTONHEIGHT));
+    }];
 }
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // 从缓存池里取
@@ -52,16 +51,6 @@
     UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     imageview.image = YHImage(GUIDE_IMAGES[indexPath.row]);
     cell.backgroundView = imageview;
-    
-    for (UIView *view in cell.subviews) {
-        if ([view isEqual:self.button]) {
-            [self.button removeFromSuperview];
-        }
-    }
-    
-    if (indexPath.row == GUIDE_IMAGES.count-1) {
-        [cell addSubview:self.button];
-    }
     return cell;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -86,5 +75,40 @@
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
+}
+
+#pragma mark ============================    lazy method    ============================
+- (UIButton *)skipBtn
+{
+    if (!_skipBtn) {
+        _skipBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _skipBtn.backgroundColor = [UIColor blackColor];
+        _skipBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        _skipBtn.alpha = 0.5;
+        _skipBtn.layer.cornerRadius = GUIDE_BUTTONHEIGHT/2;
+        [_skipBtn setTitle:@"跳过" forState:UIControlStateNormal];
+        [_skipBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_skipBtn addTarget:self action:@selector(disMissGuideView) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _skipBtn;
+}
+
+- (UICollectionView *)collectionView
+{
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        layout.itemSize = [UIScreen mainScreen].bounds.size;
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        //行距
+        layout.minimumLineSpacing = 0;
+        // 间距
+        layout.minimumInteritemSpacing = 0;
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+        _collectionView.dataSource = self;
+        [_collectionView setPagingEnabled:YES];
+    }
+    return _collectionView;
 }
 @end

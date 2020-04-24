@@ -12,27 +12,20 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="启动页" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZE5-dP-2HR">
-                                <rect key="frame" x="117" y="112" width="140" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="P8Z-BX-aFg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NLX-Bo-kvF" firstAttribute="bottom" secondItem="P8Z-BX-aFg" secondAttribute="bottom" id="0X7-VH-45d"/>
-                            <constraint firstItem="NLX-Bo-kvF" firstAttribute="trailing" secondItem="P8Z-BX-aFg" secondAttribute="trailing" id="aHF-lL-RbC"/>
-                            <constraint firstItem="P8Z-BX-aFg" firstAttribute="top" secondItem="NLX-Bo-kvF" secondAttribute="top" id="sLf-DK-Xcj"/>
-                            <constraint firstItem="P8Z-BX-aFg" firstAttribute="leading" secondItem="NLX-Bo-kvF" secondAttribute="leading" id="xQb-53-ViX"/>
+                            <constraint firstItem="P8Z-BX-aFg" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="2LA-yi-RqH"/>
+                            <constraint firstAttribute="trailing" secondItem="P8Z-BX-aFg" secondAttribute="trailing" id="XtJ-pa-6KD"/>
+                            <constraint firstAttribute="bottom" secondItem="P8Z-BX-aFg" secondAttribute="bottom" id="mle-ry-0jG"/>
+                            <constraint firstItem="P8Z-BX-aFg" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="vhi-Bf-iCZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NLX-Bo-kvF"/>
                     </view>

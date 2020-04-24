@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSAttributedString *yh_emptyTitle;
 @property (nonatomic, copy) yh_emptyTapAction yh_emptyActionBlock;
 @property (nonatomic, copy) yh_reloadBlock yh_reloadBlock;
+@property (nonatomic, copy) yh_cellHeightBlock yh_cellHeightBlock;
 
 @end
 
@@ -67,19 +68,21 @@
 }
 
 - (instancetype)initWithIdentifier:(NSString *)identifier
-                    configureBlock:(yh_cellConfigureBefore)configure
                         emptyImage:(UIImage *)emptyImage
                         emptyTitle:(NSAttributedString *)emptyTitle
+                    configureBlock:(yh_cellConfigureBefore)configure
+                        cellHeight:(yh_cellHeightBlock)cellHeight
                        selectBlock:(yh_selectCellBlock)selectBlock
                        emptyAction:(yh_emptyTapAction)emptyAction
-                        reloadData:(yh_reloadBlock)reloadData
+                        reloadData:(yh_reloadBlock)reloadData;
 {
     self = [super init];
     if (self) {
         _cellIdentifier = identifier;
-        _yh_cellConfigureBefore = [configure copy];
         _yh_emptyImage = [emptyImage copy];
         _yh_emptyTitle = [emptyTitle copy];
+        _yh_cellConfigureBefore = [configure copy];
+        _yh_cellHeightBlock = [cellHeight copy];
         _yh_selectBlock = [selectBlock copy];
         _yh_emptyActionBlock = [emptyAction copy];
         _yh_reloadBlock = [reloadData copy];
@@ -104,11 +107,20 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.yh_cellHeightBlock) {
+        id model = [self modelsAtIndexPath:indexPath];
+        return self.yh_cellHeightBlock(model ,indexPath);
+    }
+    return 44.f;
+}
+
 #pragma mark UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return !self.dataSource  ? 0: self.dataSource.count;
+    return !self.dataSource ?0 : self.dataSource.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -151,33 +163,33 @@
     return _dataSource;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return YES;
-}
-
-- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    __weak __typeof(self) weakSelf = self;
-    // 添加一个删除按钮
-    UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除"handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        
-        //在这里添加点击事件
-        [weakSelf.dataArray removeObjectAtIndex:indexPath.row];
-        weakSelf.yh_reloadBlock([weakSelf.dataArray copy]);
-    }];
-    //    // 添加一个编辑按钮
-    //    UITableViewRowAction *topRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"复制"handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-    //        //
-    //
-    //        //在这里添加点击事件
-    //        [weakSelf.dataArray insertObject:weakSelf.dataArray[indexPath.row] atIndex:indexPath.row];
-    //        weakSelf.reloadData(weakSelf.dataArray);
-    //    }];
-    //    topRowAction.backgroundColor = [UIColor cyanColor];
-    // 将设置好的按钮放到数组中返回
-    return @[deleteRowAction];
-}
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return YES;
+//}
+//
+//- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    __weak __typeof(self) weakSelf = self;
+//    // 添加一个删除按钮
+//    UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除"handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+//
+//        //在这里添加点击事件
+//        [weakSelf.dataArray removeObjectAtIndex:indexPath.row];
+//        weakSelf.yh_reloadBlock([weakSelf.dataArray copy]);
+//    }];
+//    //    // 添加一个编辑按钮
+//    //    UITableViewRowAction *topRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"复制"handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+//    //        //
+//    //
+//    //        //在这里添加点击事件
+//    //        [weakSelf.dataArray insertObject:weakSelf.dataArray[indexPath.row] atIndex:indexPath.row];
+//    //        weakSelf.reloadData(weakSelf.dataArray);
+//    //    }];
+//    //    topRowAction.backgroundColor = [UIColor cyanColor];
+//    // 将设置好的按钮放到数组中返回
+//    return @[deleteRowAction];
+//}
 
 #pragma mark ============================    DZNEmptyDataSetDelegate    ============================
 //空白页占位图
@@ -213,5 +225,6 @@
         self.yh_emptyActionBlock(YES);
     }
 }
+
 
 @end

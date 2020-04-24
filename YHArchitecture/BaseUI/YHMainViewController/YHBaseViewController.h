@@ -8,19 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "YHBaseTableView.h"
+#import "YHButton.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YHBaseViewController : UIViewController
 @property (strong,nonatomic) YHBaseTableView *mainTableView;
-@property (strong, nonatomic) UIView *nothingView;
-@property (strong, nonatomic) UILabel *nothingTitleLabel;
+@property (strong, nonatomic) UIView *baseNothingV;
+@property (strong, nonatomic) UILabel *baseNothingTitleLb;
+/** 跳转btn */
+@property (nonatomic, strong) YHButton *baseGotoBtn;
 
-
-//创建列表为空页面
+//创建内容为空页面
 - (void)createNothingView;
 
-- (void)createNothingViewOnView:(UIView *)view;
+- (void)createNothingViewOnView:(UIView *)view imageName:(NSString *)imageName;
 
 /**
  *  是否全屏布局
@@ -33,14 +36,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 //显示dataCenter图片的nav标题
 - (void)showDataCenterNavTitle;
-
-/**
- *  显示或隐藏没有数据提示view
- */
-- (void)showOrHideNoContentView:(BOOL)show;
-
-/**展示空的view*/
-+ (void)ifShowEnptyView:(BOOL)show inView:(UIView*)view;
 
 /**去空控制器*/
 + (void)gotoEmptyControllerWithTitle:(NSString*)title;

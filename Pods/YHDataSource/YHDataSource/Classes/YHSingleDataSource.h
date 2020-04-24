@@ -17,6 +17,7 @@ typedef void(^yh_reloadBlock)(NSMutableArray *_Nonnull sourceArray);
 typedef void(^yh_emptyImage)(UIImage *_Nonnull image);
 typedef void(^yh_emptyTitle)(NSAttributedString *_Nonnull title);
 typedef void(^yh_emptyTapAction)(BOOL refresh);
+typedef CGFloat(^yh_cellHeightBlock)(id _Nonnull mode, NSIndexPath *indexPath);
 
 
 /**
@@ -67,10 +68,11 @@ typedef void(^yh_emptyTapAction)(BOOL refresh);
                         reloadData:(yh_reloadBlock)reloadData;
 
 /**
- 含空视图快捷配置
+ 含空视图快捷配置(可配置行高)
  
  @param identifier 重用标识
  @param configure cell配置
+ @param cellHeight 行高回调block
  @param emptyImage 无数据显示图
  @param emptyTitle 无数据富文本提示文字
  @param selectBlock 选中回调
@@ -79,9 +81,10 @@ typedef void(^yh_emptyTapAction)(BOOL refresh);
  @return YLDataSource实例
  */
 - (instancetype)initWithIdentifier:(NSString *)identifier
-                    configureBlock:(yh_cellConfigureBefore)configure
                         emptyImage:(UIImage *)emptyImage
                         emptyTitle:(NSAttributedString *)emptyTitle
+                    configureBlock:(yh_cellConfigureBefore)configure
+                        cellHeight:(yh_cellHeightBlock)cellHeight
                        selectBlock:(yh_selectCellBlock)selectBlock
                        emptyAction:(yh_emptyTapAction)emptyAction
                         reloadData:(yh_reloadBlock)reloadData;

@@ -28,53 +28,72 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary responseClass :(id)responseClass
 {
+    self = [super init];
     _responseClass = responseClass;
-    YHDataModel *result = [YHDataModel modelWithDictionary:dictionary];
-    if (dictionary[@"desc"]) {
-        result.message = dictionary[@"desc"];
-    }
-    if (dictionary[@"data"]) {
-        id obj = [_responseClass modelWithDictionary:dictionary[@"data"]];
-        id t_result = dictionary[@"data"];
-        if ([t_result isKindOfClass:[NSArray class]]) {
-            obj = [_responseClass modelWithDictionary:@{@"data":t_result}];
-        }else if ([t_result isKindOfClass:[NSString class]]){
-            //返回数据是json串
-            id t_dic = [YHDataModel convertjsonStringToDict:t_result];
-            if ([t_dic isKindOfClass:[NSDictionary class]]) {
-                obj = [_responseClass modelWithDictionary:t_dic];
-            }else if ([t_dic isKindOfClass:[NSArray class]]){
-                obj = [_responseClass modelWithDictionary:@{@"data":t_dic}];
+    if (self) {
+        //code 处理
+        if (dictionary[@"code"]) {
+            self.code = [dictionary[@"code"] longValue];
+        }else if(dictionary[@"status"]){
+            self.code = [dictionary[@"status"] longValue];
+        }else{
+            //其他适配
+            self.code = -NOGROUP;
+        }
+        //message 处理
+        if(dictionary[@"desc"]) {
+            self.message = dictionary[@"desc"];
+        }else if(dictionary[@"message"]) {
+            self.message = dictionary[@"message"];
+        }else if(dictionary[@"status"]){
+            self.message = dictionary[@"status"];
+        }else{
+            //其他适配
+            self.message = @"";
+        }
+        
+        //data 处理
+        if (dictionary[@"response"]) {
+            id obj = [_responseClass modelWithDictionary:dictionary[@"response"]];
+            id t_result = dictionary[@"response"];
+            if ([t_result isKindOfClass:[NSArray class]]) {
+                obj = [NSArray yy_modelArrayWithClass:[_responseClass class] json:dictionary[@"response"]];
+            }else if ([t_result isKindOfClass:[NSString class]]){
+                obj = t_result;
             }
+            self.yhresponse = obj;
+        }else if(dictionary[@"page"]) {
+            id obj = [_responseClass modelWithDictionary:dictionary[@"page"]];
+            id t_result = dictionary[@"page"];
+            if ([t_result isKindOfClass:[NSArray class]]) {
+                obj = [NSArray yy_modelArrayWithClass:[_responseClass class] json:dictionary[@"page"]];
+            }else if ([t_result isKindOfClass:[NSString class]]){
+                obj = t_result;
+            }
+            self.yhresponse = obj;
+        }else if(dictionary[@"result"]){
+            id obj = [_responseClass modelWithDictionary:dictionary[@"result"]];
+            id t_result = dictionary[@"result"];
+            if ([t_result isKindOfClass:[NSArray class]]) {
+                obj = [NSArray yy_modelArrayWithClass:[_responseClass class] json:dictionary[@"result"]];
+            }else if ([t_result isKindOfClass:[NSString class]]){
+                obj = t_result;
+            }
+            self.yhresponse = obj;
+        }else if(dictionary[@"data"]){
+            id obj = [_responseClass modelWithDictionary:dictionary[@"data"]];
+            id t_result = dictionary[@"data"];
+            if ([t_result isKindOfClass:[NSArray class]]) {
+                obj =  [NSArray yy_modelArrayWithClass:[_responseClass class] json:dictionary[@"data"]];
+            }else if ([t_result isKindOfClass:[NSString class]]){
+                obj = t_result;
+            }
+            self.yhresponse = obj;
         }
+        //其他适配
+    }
         
-        result.yhresponse = obj;
-    }
-    if (dictionary[@"response"]) {
-        id obj = [_responseClass modelWithDictionary:dictionary[@"response"]];
-        id t_result = dictionary[@"response"];
-        if ([t_result isKindOfClass:[NSArray class]]) {
-            obj = [_responseClass modelWithDictionary:@{@"data":dictionary[@"response"]}];
-        }
-        
-        result.yhresponse = obj;
-    }
-    
-    if (dictionary[@"result"]) {
-        id obj = [_responseClass modelWithDictionary:dictionary[@"result"]];
-        id t_result = dictionary[@"response"];
-        if ([t_result isKindOfClass:[NSArray class]]) {
-            obj = [_responseClass modelWithDictionary:@{@"data":dictionary[@"result"]}];
-        }
-        
-        result.yhresponse = obj;
-    }
-    
-    if (dictionary[@"firstPage"]) {
-        result.yhresponse = [_responseClass modelWithDictionary:@{@"firstPage":dictionary[@"firstPage"]}];
-    }
-    
-    return result;
+    return self;
 }
 
 + (BOOL)handleResult:(YHDataModel *)result

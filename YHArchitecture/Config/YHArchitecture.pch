@@ -13,10 +13,14 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import "AppDelegate.h"
 #import "YHMainViewController.h"
+#import "UIColor+Utilities.h"
 #import "YHConstant.h"
 #import "YHToast.h"
 #import "Masonry.h"
 #import "YHAppColor.h"
+#import "YHUrlMacro.h"
+#import "YHPlatformIDsMacro.h"
+
 
 #define RootTabbarViewConTroller ((YHMainViewController*)[AppDelegate appDelegate].window.rootViewController)
 

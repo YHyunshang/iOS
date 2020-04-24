@@ -43,16 +43,14 @@
         return;
     
     // timer将被放入的队列queue，也就是最终action执行的队列。传入nil将自动放到一个全局子线程队列中
-    if (nil == queue)
-    {
+    if (nil == queue){
         queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     }
     
     // 创建dispatch_source_t的timer
     dispatch_source_t timer = [self.timerArry objectForKey:timerName];
     
-    if (nil == timer)
-    {
+    if (nil == timer){
         timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
         dispatch_resume(timer);
         [self.timerArry setObject:timer forKey:timerName];
@@ -62,8 +60,8 @@
     dispatch_source_set_timer(timer, dispatch_time(DISPATCH_TIME_NOW, interval * NSEC_PER_SEC), interval * NSEC_PER_SEC, precision * NSEC_PER_SEC);
     
     BIWeakObj(self)
-    if(option == CancelPreviousTimerAction) // 取消上一次timer任务
-    {
+    if(option == CancelPreviousTimerAction){
+        // 取消上一次timer任务
         // 移除上一次任务
         [self removeActionCacheForTimer:timerName];
         
@@ -77,9 +75,8 @@
             }
         });
         
-    }
-    else if (option == MergePreviousTimerAction) // 合并上一次timer任务
-    {
+    }else if (option == MergePreviousTimerAction){
+        // 合并上一次timer任务
         // 缓存本次timer任务
         [self cacheAction:action forTimer:timerName];
         
@@ -137,12 +134,9 @@
 {
     id actionArray = [self.timerActionBlockCacheArry objectForKey:timerName];
     
-    if (actionArray && [actionArray isKindOfClass:[NSMutableArray class]])
-    {
+    if (actionArray && [actionArray isKindOfClass:[NSMutableArray class]]){
         [(NSMutableArray *)actionArray addObject:action];
-    }
-    else
-    {
+    }else{
         NSMutableArray *array = [NSMutableArray arrayWithObject:action];
         [self.timerActionBlockCacheArry setObject:array forKey:timerName];
     }

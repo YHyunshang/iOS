@@ -8,7 +8,6 @@
 
 #import "YHMainViewController.h"
 #import "UITabBarController+Additionals.h"
-#import "UIView+Size.h"
 #import "YHNavigationViewController.h"
 #import "YHConstant.h"
 
@@ -49,7 +48,6 @@
     }
 }
 
-
 - (NSArray *)createSubViewController
 {
     NSArray* subViewClasses = [NSArray arrayWithObjects:
@@ -60,5 +58,9 @@
     return [self createSubViewsFromItems:subViewClasses];
 }
 
+- (void)setSelectedIndex:(NSUInteger)selectedIndex
+{
+    [super setSelectedIndex:selectedIndex];
+}
 
 @end

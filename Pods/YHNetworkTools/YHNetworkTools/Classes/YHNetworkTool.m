@@ -18,17 +18,14 @@
 
 #define YHNETWORK_REQUEST_MACRO(METHOD,HUD) \
 [super METHOD:URLString parameters:parameters success:^(NSURLSessionDataTask * task, id responseObject) { \
-[HUD hideAnimated:YES];\
 NSString *jsonStr;\
-if (responseObject) {\
-jsonStr = [(NSDictionary *)responseObject yy_modelToJSONString];\
-YH_Log(@"jsonStr = %@",jsonStr);\
-}\
-requestBack(YES, responseObject, jsonStr, parameters, nil);\
-} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {\
+NSHTTPURLResponse *r = (NSHTTPURLResponse *)task.response;\
+NSString *loginToken = [r allHeaderFields][@"login-token"];\
+requestBack(YES, loginToken, responseObject, jsonStr, parameters, nil);\
 [HUD hideAnimated:YES];\
-YH_Log(@"\n请求失败************************\n%@",error);\
-requestBack(NO, nil, nil, parameters, [error localizedDescription]);\
+} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {\
+requestBack(NO, nil, nil, nil, parameters, [error localizedDescription]);\
+[HUD hideAnimated:YES];\
 }]
 
 @implementation YHNetworkTool
@@ -49,15 +46,8 @@ requestBack(NO, nil, nil, parameters, [error localizedDescription]);\
                     parameters:(id)parameters
                    requestBack:(YHClientRequestBack)requestBack
 {
-    return YHNETWORK_REQUEST_MACRO(POST, [self hudFromView:view]);
-    return [super POST:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        if (responseObject) {
-            NSString *jsonStr = [(NSDictionary *)responseObject yy_modelToJSONString];
-            YH_Log(@"jsonStr = %@",jsonStr);
-        }
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        ;
-    }];
+    MBProgressHUD *hud = [self hudFromView:view];
+    return YHNETWORK_REQUEST_MACRO(POST, hud);
 }
 
 - (NSURLSessionDataTask *)GET:(NSString *)URLString
@@ -65,7 +55,8 @@ requestBack(NO, nil, nil, parameters, [error localizedDescription]);\
                    parameters:(id)parameters
                   requestBack:(YHClientRequestBack)requestBack
 {
-    return YHNETWORK_REQUEST_MACRO(GET, [self hudFromView:view]);
+    MBProgressHUD *hud = [self hudFromView:view];
+    return YHNETWORK_REQUEST_MACRO(GET, hud);
 }
 
 - (NSURLSessionDataTask *)DELETE:(NSString *)URLString
@@ -73,7 +64,8 @@ requestBack(NO, nil, nil, parameters, [error localizedDescription]);\
                       parameters:(id)parameters
                      requestBack:(YHClientRequestBack)requestBack
 {
-    return YHNETWORK_REQUEST_MACRO(DELETE, [self hudFromView:view]);
+    MBProgressHUD *hud = [self hudFromView:view];
+    return YHNETWORK_REQUEST_MACRO(DELETE, hud);
 }
 
 - (NSURLSessionDataTask *)PUT:(NSString *)URLString
@@ -81,7 +73,8 @@ requestBack(NO, nil, nil, parameters, [error localizedDescription]);\
                    parameters:(id)parameters
                   requestBack:(YHClientRequestBack)requestBack
 {
-    return YHNETWORK_REQUEST_MACRO(PUT, [self hudFromView:view]);
+    MBProgressHUD *hud = [self hudFromView:view];
+    return YHNETWORK_REQUEST_MACRO(PUT, hud);
 }
 
 - (NSURLSessionDataTask *)UPLOAD:(NSString *)URLString
@@ -102,12 +95,51 @@ constructingBodyWithBlock:block
                          NSString *jsonStr = [(NSDictionary *)responseObject yy_modelToJSONString];
                          YH_Log(@"jsonStr = %@",jsonStr);
                      }
-                     requestBack(YES, responseObject, nil, parameters, nil);
+                     requestBack(YES,nil, responseObject, nil, parameters, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [hud hideAnimated:YES];
-        YH_Log(@"\n请求失败************************\n%@",error);
-        requestBack(NO, nil, nil, parameters, [error localizedDescription]);
+        requestBack(NO, nil ,nil, nil, parameters, [error localizedDescription]);
     }];
+}
+
+- (NSURLSessionDownloadTask *)DOWNLOAD:(NSString *)URLString
+                                inView:(UIView *)view
+                              filePath:(NSString *)filePath
+                              fileName:(NSString *)fileName
+                            parameters:(id)parameters
+                              progress:(void (^)(NSProgress *))downloadProgress
+                           requestBack:(YHDownloadRequestBack)requestBack
+{
+    MBProgressHUD *hud = [self hudFromView:view];
+    
+    return [super DOWNLOAD:URLString filePath:filePath fileName:fileName parameters:parameters progress:downloadProgress success:^(NSURL *targetPath, NSURLResponse * _Nonnull response) {
+        hud.removeFromSuperViewOnHide = YES;
+        [hud hideAnimated:YES];
+        requestBack(YES, targetPath, response, nil);
+    } failure:^(NSError *error) {
+        hud.removeFromSuperViewOnHide = YES;
+        [hud hideAnimated:YES];
+        requestBack(NO, nil, nil, error);
+    }];
+}
+
++ (NSData *)imageToData:(UIImage *)image {
+    NSData *data = UIImageJPEGRepresentation(image, 1.0);
+    CGFloat size = 50;
+    CGFloat dataKBytes = data.length/1000.0;
+    CGFloat maxQuality = 0.9f;
+    CGFloat lastData = dataKBytes;
+    while (dataKBytes > size) {
+        maxQuality = maxQuality - 0.1f;
+        data = UIImageJPEGRepresentation(image, maxQuality);
+        dataKBytes = data.length/1000.0;
+        if (lastData == dataKBytes) {
+            break;
+        }else{
+            lastData = dataKBytes;
+        }
+    }
+    return data;
 }
 
 @end

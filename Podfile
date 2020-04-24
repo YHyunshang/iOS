@@ -20,6 +20,7 @@ target 'YHArchitecture' do
   pod "SDCycleScrollView"  #轮播图
   pod "MBProgressHUD"
   pod "WHDebugTool"
+  pod "Bugly"
 #  pod "PYPhotoBrowser"
   pod "LSSafeProtector"
   pod "YHTrackSDK-iOS"
@@ -29,6 +30,7 @@ target 'YHArchitecture' do
   pod 'AppOrderFiles'
   pod 'WebViewJavascriptBridge'
   pod 'XHLaunchAd'
+  pod "FluentDarkModeKit"
 #  pod 'YLNetClient'
 
   #Swift

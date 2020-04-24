@@ -9,7 +9,6 @@
 #import "YHSplashViewController.h"
 #import "YHUserGuideViewController.h"
 
-#define NetWorkTag   111111
 @interface YHSplashViewController ()<UIAlertViewDelegate>
 
 @end
@@ -19,11 +18,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     [self selectEnv];
+    [self requestOnLineVersionToUpdate];
 }
 
 #pragma mark ============================    custom method    ============================
-
+//版本检测逻辑
+- (void)requestOnLineVersionToUpdate
+{
+    
+}
 /**
  切换环境
  */
@@ -43,9 +49,7 @@
         [self enterApp];
     }]];
 
-    [self presentViewController:alert animated:YES completion:^{
-
-    }];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 /**
@@ -66,6 +70,7 @@
     }
 }
 
+/// 跳转到主框架
 - (void)enterMainViewController
 {
     UIWindow *keyWindow = [[UIApplication sharedApplication] delegate].window;

@@ -36,6 +36,7 @@
         return YES;
     }
 }
+
 /** 检测定位权限 */
 - (BOOL)checkLocationPermission
 {
@@ -46,6 +47,7 @@
     }
     return NO;
 }
+
 //跳转设置摄像头权限
 - (void)goToSettingCameraAuthorization
 {
@@ -56,11 +58,13 @@
         [[UIApplication sharedApplication] openURL:url];
     }
 }
+
 //跳转到app权限列表界面
 - (void)goToAppAuthorizationListView
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 }
+
 /** 验证是否有相机权限，并且showAlert */
 - (void)verifyCanPhoto:(void (^)(BOOL))ret
 {
@@ -80,6 +84,7 @@
         [RootTabbarViewConTroller presentViewController:alert animated:YES completion:nil];
     }
 }
+
 /** 验证是否有定位权限，并且showAlert */
 - (void)verifyCanLocation:(void (^)(BOOL))ret
 {

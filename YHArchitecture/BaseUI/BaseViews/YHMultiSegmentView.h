@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+Size.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

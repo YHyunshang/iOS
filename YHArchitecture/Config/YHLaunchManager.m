@@ -16,10 +16,10 @@
 @implementation YHLaunchManager
 
 + (void)load{
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        [self sharedManager];
-//    });
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self sharedManager];
+    });
 }
 
 + (instancetype)sharedManager{
@@ -46,7 +46,7 @@
 //XHLaunchAd使用示例
 - (void)setupXHLaunchAd{
     //设置你工程的启动页使用的是:LaunchImage 还是 LaunchScreen.storyboard(不设置默认:LaunchImage)
-    [XHLaunchAd setLaunchSourceType:SourceTypeLaunchImage];
+    [XHLaunchAd setLaunchSourceType:SourceTypeLaunchScreen];
     
     //配置广告数据
     XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration new];
@@ -84,6 +84,7 @@
 /// @param openModel <#openModel description#>
 /// @param clickPoint <#clickPoint description#>
 - (BOOL)xhLaunchAd:(XHLaunchAd *)launchAd clickAtOpenModel:(id)openModel clickPoint:(CGPoint)clickPoint{
+    //广告点击逻辑处理
     return YES;//YES移除广告,NO不移除广告
 }
 
@@ -91,7 +92,7 @@
 /// @param launchAd <#launchAd description#>
 /// @param skipButton <#skipButton description#>
 - (void)xhLaunchAd:(XHLaunchAd *)launchAd clickSkipButton:(UIButton *)skipButton{
-    
+    //跳过按钮处理
 }
 
 /// 图片下载完成
