@@ -163,24 +163,24 @@ picker.jsonModelPropertyName = @"showProperty";//显示的字段
 #### 7 版本更新说明
 
 ###### V0.2.0更新说明
-\* 新增线上崩溃处理库LSSafeProtector、Bugly，并在AppDelegate增加bug采集逻辑
-\* 新增启动广告图处理库XHLaunchAd
-\* 新增放抓包逻辑处理（NSURLSession），优化模型解析逻辑
-\* 新增url管理、发包关键参数配置、第三方平台配置头文件
-\* 新增UIUserInterfaceStyle配置，禁用夜间模式
-\* 修改模态模式为UIModalPresentationFullScreen
-\* 优化引导轮播图，使用时请自定义跳过按钮位置
-\* 优化文件目录接口及基础组件，删除冗余代码及文件
+- 新增线上崩溃处理库LSSafeProtector、Bugly，并在AppDelegate增加bug采集逻辑
+- 新增启动广告图处理库XHLaunchAd
+- 新增放抓包逻辑处理（NSURLSession），优化模型解析逻辑
+- 新增url管理、发包关键参数配置、第三方平台配置头文件
+- 新增UIUserInterfaceStyle配置，禁用夜间模式
+- 修改模态模式为UIModalPresentationFullScreen
+- 优化引导轮播图，使用时请自定义跳过按钮位置
+- 优化文件目录接口及基础组件，删除冗余代码及文件
 
 ###### V0.1.2更新说明
 
-\*增加UITableView、UICollectionView代理封装以及空视图处理工具YHDataSource
+- 增加UITableView、UICollectionView代理封装以及空视图处理工具YHDataSource
 
 ###### V0.1.1更新说明
 
-\* 修改Readme文件
-\* 优化编码规范显示
-\* 添加debug工具和内存泄漏检测工具
+- 修改Readme文件
+- 优化编码规范显示
+- 添加debug工具和内存泄漏检测工具
 
 
 
