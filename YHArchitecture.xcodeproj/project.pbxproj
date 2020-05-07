@@ -29,6 +29,7 @@
 		8F37461A2188000C0034148B /* YHMultiSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746192188000C0034148B /* YHMultiSegmentView.m */; };
 		8F3746292188065E0034148B /* YHJSHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37461C2188065E0034148B /* YHJSHandler.m */; };
 		8F37462E2188065E0034148B /* YHBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3746262188065E0034148B /* YHBaseWebViewController.m */; };
+		8F4A7B05245522F3008387DF /* YHWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A7B04245522F3008387DF /* YHWeakProxy.m */; };
 		8F4E00322198FB5F00A72384 /* YHDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E002D2198FB5F00A72384 /* YHDataModel.m */; };
 		8F4EFFDC21951F9300A72384 /* YHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4EFFDB21951F9300A72384 /* YHPickerView.m */; };
 		8F4EFFDE21951F9E00A72384 /* YHPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F4EFFDD21951F9E00A72384 /* YHPickerView.xib */; };
@@ -140,6 +141,8 @@
 		8F3746272188065E0034148B /* YHJSHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHJSHandler.h; sourceTree = "<group>"; };
 		8F3746282188065E0034148B /* YHBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHBaseWebViewController.h; sourceTree = "<group>"; };
 		8F4A7B01245285A2008387DF /* YHDeployInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHDeployInfo.h; sourceTree = "<group>"; };
+		8F4A7B03245522F3008387DF /* YHWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHWeakProxy.h; sourceTree = "<group>"; };
+		8F4A7B04245522F3008387DF /* YHWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHWeakProxy.m; sourceTree = "<group>"; };
 		8F4E00272198FB5E00A72384 /* YHSXRequestControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHSXRequestControl.h; sourceTree = "<group>"; };
 		8F4E00292198FB5E00A72384 /* YHUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHUserModel.h; sourceTree = "<group>"; };
 		8F4E002A2198FB5E00A72384 /* YHSXRequestControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHSXRequestControl.m; sourceTree = "<group>"; };
@@ -379,6 +382,8 @@
 				8F87F2E7244EC3E300DDFCB9 /* YHUrlMacro.h */,
 				8F87F2E8244EC44A00DDFCB9 /* YHPlatformIDsMacro.h */,
 				8F4A7B01245285A2008387DF /* YHDeployInfo.h */,
+				8F4A7B03245522F3008387DF /* YHWeakProxy.h */,
+				8F4A7B04245522F3008387DF /* YHWeakProxy.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -794,6 +799,7 @@
 				8F00348D217372C500FF837C /* YHMainViewController.m in Sources */,
 				8F3746292188065E0034148B /* YHJSHandler.m in Sources */,
 				8F37461A2188000C0034148B /* YHMultiSegmentView.m in Sources */,
+				8F4A7B05245522F3008387DF /* YHWeakProxy.m in Sources */,
 				8F2E141921830EF700545D39 /* YHPermissionManager.m in Sources */,
 				8F1DED1221736E75003F1BC4 /* main.m in Sources */,
 				8F6F209422029479004AB396 /* YHTimeTool.m in Sources */,
