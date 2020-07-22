@@ -54,6 +54,9 @@
 		8F87F2EB244ED20400DDFCB9 /* YHSXRequestControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E002A2198FB5E00A72384 /* YHSXRequestControl.m */; };
 		8F87F2EC244ED21B00DDFCB9 /* YHUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E002B2198FB5E00A72384 /* YHUserModel.m */; };
 		8F87F2ED244ED22700DDFCB9 /* YHSXNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E003421991AE000A72384 /* YHSXNetworkConfig.m */; };
+		8FD6A7FE24C838C100614FA7 /* YLQRCodeObtain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD6A7FA24C838C100614FA7 /* YLQRCodeObtain.m */; };
+		8FD6A7FF24C838C100614FA7 /* YLQRCodePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD6A7FD24C838C100614FA7 /* YLQRCodePreview.m */; };
+		8FD6A80224C8399B00614FA7 /* YHQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD6A80124C8399B00614FA7 /* YHQRCodeVC.m */; };
 		8FFB5FD6228EBE07000805A4 /* YHMultiSegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFB5FD5228EBE07000805A4 /* YHMultiSegmentView.xib */; };
 		B41851B0373933B0A46D3081 /* libPods-YHArchitectureUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69124BE49F621B7D9D20DD07 /* libPods-YHArchitectureUITests.a */; };
 		D79CF363C03269699AB84E06 /* libPods-YHArchitectureTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47603FF239EDC49915AC2C63 /* libPods-YHArchitectureTests.a */; };
@@ -181,6 +184,12 @@
 		8F87F2E5244E9F0300DDFCB9 /* NSURLSession+Forbid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+Forbid.m"; sourceTree = "<group>"; };
 		8F87F2E7244EC3E300DDFCB9 /* YHUrlMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHUrlMacro.h; sourceTree = "<group>"; };
 		8F87F2E8244EC44A00DDFCB9 /* YHPlatformIDsMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHPlatformIDsMacro.h; sourceTree = "<group>"; };
+		8FD6A7FA24C838C100614FA7 /* YLQRCodeObtain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLQRCodeObtain.m; sourceTree = "<group>"; };
+		8FD6A7FB24C838C100614FA7 /* YLQRCodePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLQRCodePreview.h; sourceTree = "<group>"; };
+		8FD6A7FC24C838C100614FA7 /* YLQRCodeObtain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLQRCodeObtain.h; sourceTree = "<group>"; };
+		8FD6A7FD24C838C100614FA7 /* YLQRCodePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLQRCodePreview.m; sourceTree = "<group>"; };
+		8FD6A80024C8399B00614FA7 /* YHQRCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHQRCodeVC.h; sourceTree = "<group>"; };
+		8FD6A80124C8399B00614FA7 /* YHQRCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHQRCodeVC.m; sourceTree = "<group>"; };
 		8FFB5FD5228EBE07000805A4 /* YHMultiSegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHMultiSegmentView.xib; sourceTree = "<group>"; };
 		E2BB21DA3F38658B2F420F71 /* Pods-YHArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHArchitecture.release.xcconfig"; path = "Pods/Target Support Files/Pods-YHArchitecture/Pods-YHArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -403,6 +412,8 @@
 				8F00349E21737D6800FF837C /* Third */,
 				8F00349D21737D5E00FF837C /* Second */,
 				8F00349C21737D5300FF837C /* First */,
+				8FD6A80024C8399B00614FA7 /* YHQRCodeVC.h */,
+				8FD6A80124C8399B00614FA7 /* YHQRCodeVC.m */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -545,8 +556,20 @@
 		8F87F2D5244D3AA700DDFCB9 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				8FD6A7F924C838C100614FA7 /* QRCodeView */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		8FD6A7F924C838C100614FA7 /* QRCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				8FD6A7FA24C838C100614FA7 /* YLQRCodeObtain.m */,
+				8FD6A7FB24C838C100614FA7 /* YLQRCodePreview.h */,
+				8FD6A7FC24C838C100614FA7 /* YLQRCodeObtain.h */,
+				8FD6A7FD24C838C100614FA7 /* YLQRCodePreview.m */,
+			);
+			path = QRCodeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -784,6 +807,7 @@
 				8F87F2D4244D371E00DDFCB9 /* YHToast.m in Sources */,
 				8F2E14342186E88C00545D39 /* UIColor+Utilities.m in Sources */,
 				8F0034AD21737DAB00FF837C /* ThirdViewController.m in Sources */,
+				8FD6A7FF24C838C100614FA7 /* YLQRCodePreview.m in Sources */,
 				8F87F2C3244D32EB00DDFCB9 /* YHBaseTableView.m in Sources */,
 				8F2E14282186B5B500545D39 /* YHEmptyViewController.m in Sources */,
 				8F87F2DF244D6F6400DDFCB9 /* UIViewController+YHModalStyle.m in Sources */,
@@ -792,6 +816,7 @@
 				8F2E141621830C5300545D39 /* YHAppColor.m in Sources */,
 				8F00348A217372A200FF837C /* YHNavigationViewController.m in Sources */,
 				8F87F2C6244D330700DDFCB9 /* YHBaseCollectionView.m in Sources */,
+				8FD6A7FE24C838C100614FA7 /* YLQRCodeObtain.m in Sources */,
 				8F6EDA7423E92214001C0ECF /* YHUserDefaultUtil.m in Sources */,
 				8F4E00322198FB5F00A72384 /* YHDataModel.m in Sources */,
 				8F87F2E6244E9F0300DDFCB9 /* NSURLSession+Forbid.m in Sources */,
@@ -802,6 +827,7 @@
 				8F4A7B05245522F3008387DF /* YHWeakProxy.m in Sources */,
 				8F2E141921830EF700545D39 /* YHPermissionManager.m in Sources */,
 				8F1DED1221736E75003F1BC4 /* main.m in Sources */,
+				8FD6A80224C8399B00614FA7 /* YHQRCodeVC.m in Sources */,
 				8F6F209422029479004AB396 /* YHTimeTool.m in Sources */,
 				8F2E14242186B40900545D39 /* YHBaseViewController.m in Sources */,
 			);

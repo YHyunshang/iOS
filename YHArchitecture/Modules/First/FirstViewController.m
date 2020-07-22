@@ -11,6 +11,7 @@
 #import "YHButton.h"
 #import "YHMultiSegmentView.h"
 #import "YHDataModel.h"
+#import "YHQRCodeVC.h"
 
 @interface FirstViewController ()<YHMultiSegmentViewDelegate>
 /** <#Description#> */
@@ -35,7 +36,15 @@
 //            ;
 //        }
 //    }];
-        
+      
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"扫一扫" style:UIBarButtonItemStylePlain target:self action:@selector(clickRightItem)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+- (void)clickRightItem
+{
+    YHQRCodeVC *qrcodeVC = [YHQRCodeVC new];
+    [self.navigationController pushViewController:qrcodeVC animated:YES];
 }
 
 - (void)configureUI
