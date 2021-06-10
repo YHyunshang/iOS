@@ -31,10 +31,10 @@ extern CFAbsoluteTime YH_MainStartTime;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    //二进制重排文件表可注释
-    AppOrderFiles(^(NSString *orderFilePath) {
-        YHLog(@"orderFilePath --- %@",orderFilePath);
-    });
+//    //二进制重排文件表可注释
+//    AppOrderFiles(^(NSString *orderFilePath) {
+//        YHLog(@"orderFilePath --- %@",orderFilePath);
+//    });
     [self configAssistTool];
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[YHSplashViewController new]];

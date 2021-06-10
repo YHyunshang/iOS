@@ -57,6 +57,12 @@
 
 #pragma mark ============================    DZNEmptyDataSetSource    ============================
 
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"这只title";
+    NSMutableAttributedString *attribuString = [[NSMutableAttributedString alloc]initWithString:text attributes:nil];
+    return attribuString;
+}
 /**
 *  返回文字详情
 */

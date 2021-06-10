@@ -102,4 +102,14 @@
 - (void)xhLaunchAd:(XHLaunchAd *)launchAd imageDownLoadFinish:(UIImage *)image imageData:(NSData *)imageData{
     
 }
+
+- (void)xhLaunchAdShowFinish:(XHLaunchAd *)launchAd
+{
+    
+}
+
+- (void)dealloc
+{
+    NSLog(@"%s", __func__);
+}
 @end

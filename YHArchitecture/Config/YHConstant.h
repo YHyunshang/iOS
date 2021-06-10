@@ -42,6 +42,8 @@
 // 强引用宏
 #define YHStrongSelf(type)  __strong typeof(type) type = weak##type;
 
+#define iPhoneX_AreaH (isIPhoneXSeries ? 34 : 0)
+
 //沙盒目录文件
 //获取temp
 #define kPathTemp NSTemporaryDirectory()
